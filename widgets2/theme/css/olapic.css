@@ -14,9 +14,10 @@
 .opacity{
   opacity: 0.5;
 }
-.settings{
-  height: 90%;
+.screenSettings{
+  height: 490px;
   overflow: hidden;
+  width: 570px;
 }
 .imgToTop img, .imgToBottom img{
   position: relative;
@@ -26,6 +27,15 @@
 }
 .imgToBottom img{
   bottom: 0px;
+}
+.toRigth{
+  float: right;
+}
+.toLeft{
+  float: left;
+}
+.w40per{
+  width: 40%;
 }
 /* olapic presentation */
 
