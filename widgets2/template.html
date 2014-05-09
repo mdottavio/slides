@@ -161,6 +161,182 @@ URL: https://code.google.com/p/io-2012-slides
       <p class="url">//photorankstatics-a.akamaihd.net/blablaHASHblabla/static/frontend/latest/build.min.js</p>
     </article>
   </slide>
+  <slide>
+    <hgroup>
+      <h3>The script</h3>
+    </hgroup>
+    <article class="smaller">
+      <pre class="prettyprint" data-lang="javascript">
+      &lt;script type="text/javascript" src="URL_TO_build.min.js"&gt;&lt;/script&gt;
+      &lt;script type="text/javascript" &gt;
+      function onOlapicLoad(){
+          OlapicSDK.conf.set('apikey', 'blablabla_API_KEY_blablabla');
+          window.olapic = window.olapic || new OlapicSDK.Olapic( function(o){
+              window.olapic = o;
+              renderWidget({'instance':'blablabla_INSTANCE_HASH_blablabla'});
+          });
+      }
+
+      function renderWidget(options){
+          var settings = {
+              wrapper: 'olapic_specific_widget',
+              // widget_id : parseInt( options.widgetId ),
+              id: options.instance,
+              stream_order : 'recent',
+              stream_type : '', //by_gallery|by_category|by_tag|by_tag_category
+              stream_type_href : '',
+              tags: '',
+              stream_page_limit : parseInt( options.count ),
+              lang: 'ES_ar'
+          };
+          window.olapic.prepareWidget(settings, { 'renderNow' : true, 'force':(options.force || false) });
+      }
+      &lt;/script&gt;
+      </pre>
+    </article>
+  </slide>
+  <slide>
+    <hgroup>
+      <h3>The script</h3>
+    </hgroup>
+    <article class="smaller">
+      <pre class="prettyprint" data-lang="javascript">
+      &lt;script type="text/javascript" src="URL_TO_build.min.js"&gt;&lt;/script&gt;
+      &lt;script type="text/javascript" &gt;
+      <b>var wi = null;</b>
+      function onOlapicLoad(){
+          ...
+      }
+
+      function renderWidget(options){
+          var settings = {
+              wrapper: 'olapic_specific_widget',
+              // widget_id : parseInt( options.widgetId ),
+              id: options.instance,
+              stream_order : 'recent',
+              stream_type : '', //by_gallery|by_category|by_tag|by_tag_category
+              stream_type_href : '',
+              tags: '',
+              stream_page_limit : parseInt( options.count ),
+              lang: 'ES_ar'
+          };
+          window.olapic.prepareWidget(settings, { 'renderNow' : true, 'force':(options.force || false) }<b>
+          , afterInstace : function(instance){
+              wi = instance;
+          }</b> });
+      }
+
+      &lt;/script&gt;
+      </pre>
+    </article>
+  </slide>
+  <slide>
+    <hgroup>
+      <h3>The script</h3>
+    </hgroup>
+    <article class="smaller">
+      <pre class="prettyprint" data-lang="javascript">
+      &lt;script type="text/javascript" src="URL_TO_build.min.js"&gt;&lt;/script&gt;
+      &lt;script type="text/javascript" &gt;
+      function openViewer(){
+        wi.viewer.open({media:'//rest.local.photorank.me/media/463475147'})
+      }
+
+      function openUploader(){
+        wi.uploader.open()
+      }
+      &lt;/script&gt;
+      </pre>
+    </article>
+  </slide>
+  <slide>
+    <hgroup>
+      <h3>Uploader: Methods</h3>
+    </hgroup>
+    <article class="smaller">
+      <pre class="prettyprint" data-lang="javascript">
+      open : function(){
+      }
+      </pre>
+      <pre class="prettyprint" data-lang="javascript">
+      close : function(){
+      }
+      </pre>
+    </article>
+  </slide>
+  <slide>
+    <hgroup>
+      <h3>Viewer2v1: Methods</h3>
+    </hgroup>
+    <article class="smaller">
+      <pre class="prettyprint" data-lang="javascript">
+      open: function(data){ // { media : mediaEndPoint }
+      }
+      </pre>
+      <pre class="prettyprint" data-lang="javascript">
+      close : function(){
+      }
+      </pre>
+      <pre class="prettyprint" data-lang="javascript">
+      move: function(direction){ //'next' or 'prev'
+      }
+      </pre>
+    </article>
+  </slide>
+  <slide>
+    <hgroup>
+      <h2>Code Slide (with Subtitle Placeholder)</h2>
+      <h3>Subtitle Placeholder</h3>
+    </hgroup>
+    <article>
+      <p>Press 'h' to highlight important sections of code (wrapped in <code>&lt;b&gt;</code>).</p>
+      <pre class="prettyprint" data-lang="javascript">
+&lt;script type='text/javascript'&gt;
+  // Say hello world until the user starts questioning
+  // the meaningfulness of their existence.
+  function helloWorld(world) {
+    <b>for (var i = 42; --i &gt;= 0;) {
+      alert('Hello ' + String(world));
+    }</b>
+  }
+&lt;/script&gt;
+</pre>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Code Slide (Smaller Font)</h2>
+    </hgroup>
+    <article class="smaller">
+      <pre class="prettyprint" data-lang="javascript">
+// Say hello world until the user starts questioning
+// the meaningfulness of their existence.
+function helloWorld(world) {
+  for (var i = 42; --i &gt;= 0;) {
+    alert('Hello ' + String(world));
+  }
+}
+</pre>
+<pre class="prettyprint" data-lang="css">
+&lt;style&gt;
+  p { color: pink }
+  b { color: blue }
+&lt;/style&gt;
+</pre>
+<pre class="prettyprint" data-lang="html">
+&lt;!DOCTYPE html>
+&lt;html>
+&lt;head>
+  &lt;title>My Awesome Page&lt;/title>
+&lt;/head>
+&lt;body>
+  &lt;p&gt;Hello world&lt;/p&gt;
+&lt;body>
+&lt;/html>
+</pre>
+    </article>
+  </slide>
   <!-- end Slide Mauri -->
 
 
