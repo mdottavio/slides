@@ -72,6 +72,9 @@
   font-family: 'Source Code Pro', 'Courier New', monospace;
   color: black;
 }
+.smaller .col-1-3 ul li{
+  font-size: 81%;
+}
 /* olapic presentation */
 
 

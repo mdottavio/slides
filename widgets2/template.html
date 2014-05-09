@@ -285,6 +285,110 @@ URL: https://code.google.com/p/io-2012-slides
   </slide>
   <slide>
     <hgroup>
+      <h2>Callbacks</h3>
+    </hgroup>
+    <article class="smaller">
+      <div class="col-1-3">
+        <h3>Widget - Wall</h3>
+        <ul>
+          <li>olapicWallItemsInjected</li>
+          <li>olapicWallAfterLoadPage</li>
+          <li>olapicWallAfterLoad</li>
+          <li>olapicWallBatchCompleted</li>
+          <li>olapicWallMouseHover</li>
+          <li>olapicWallMouseOut</li>
+          <li>olapicWallStreamsList (TODO - not implemented yet)</li>
+          <li>olapicWallInitSorting</li>
+        </ul>
+      </div>
+      <div class="col-1-3">
+        <h3>Widget - Carousel</h3>
+        <ul>
+          <li>olapicWallItemsInjected</li>
+          <li>olapicSliderBeforeInitCarousel</li>
+          <li>olapicSliderCarouselBeforePagination</li>
+        </ul>
+        <h3>Widget - Button</h3>
+        <ul>
+          <li>olapicButtonAfterRender</li>
+          <li>olapicSliderBeforeInitCarousel</li>
+          <li>olapicSliderCarouselBeforePagination</li>
+        </ul>
+      </div>
+      <div class="col-1-3">
+        <h3>UploaderV1</h3>
+        <ul>
+          <li>olapicUploaderAfterRender</li>
+          <li>olapicUploaderBeforeOpen</li>
+          <li>olapicUploaderAfterClose</li>
+        </ul>
+        <h3>Viewer2v1</h3>
+        <ul>
+          <li>olapicViewer2AfterRender</li>
+          <li>olapicViewer2AfterShow</li>
+          <li>olapicViewer2AfterClose</li>
+        </ul>
+      </div>
+      <footer class="source">source: <a href="https://github.com/Olapic/Documentation/blob/master/05-Integrations/01-Template-development/themes-04-callbacks.md">internal docs</a></footer>
+    </article>
+  </slide>
+  <slide>
+    <hgroup>
+      <h2>Callbacks</h3>
+      <h3>Templates: JS Callbacks</h3>
+    </hgroup>
+    <article class="smaller">
+      <pre class="prettyprint" data-lang="javascript">
+      &lt;script type="text/javascript" &gt;
+      /*
+      use this template to refine the callbacks used on the widget
+      Uncomment the following lines:
+
+      var OlapicCallback = OlapicCallback || {};
+      OlapicCallback.olapicWallItemsInjected = function(<b>w</b>){
+        // place your code here
+      };
+      ...
+      OlapicCallback.olapicWallStreamsList = function(<b>w</b>){
+        // place your code here
+      };
+      OlapicCallback.olapicWallInitSorting = function(<b>w</b>){
+        // place your code here
+      };
+      */
+      &lt;/<b>{{!}}</b>script&gt;
+      </pre>
+    </article>
+  </slide>
+  <slide>
+    <hgroup>
+      <h3>oQuery</h3>
+    </hgroup>
+    <article class="smaller">
+      <pre class="prettyprint" data-lang="javascript">
+      oQuery.fn.oQuery
+      </pre>
+      <div class="centered">
+        <img src="images/assets/version.gif">
+      </div>
+    </article>
+  </slide>
+  <slide>
+    <hgroup>
+      <h3>Packery</h3>
+    </hgroup>
+    <article class="smaller">
+      <p>
+        <code>oPackery</code> is the wall you can use it as any instance of Packery;
+      </p>
+      <div class="centered">
+        <iframe data-src="https://i.cloudup.com/transcoded/cwCS-EOSUq.mp4"></iframe>
+      </div>
+    </article>
+  </slide>
+ 
+  <slide>
+    <hgroup>
       <h2>Code Slide (with Subtitle Placeholder)</h2>
       <h3>Subtitle Placeholder</h3>
     </hgroup>
