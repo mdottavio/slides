@@ -15,10 +15,11 @@
   opacity: 0.5;
 }
 .screenSettings{
-  height: 490px;
+  height: 100%;
   overflow: hidden;
   box-sizing: border-box;
   padding: 19px;
+  position: relative;
 }
 .imgToTop img, .imgToBottom img{
   position: relative;
