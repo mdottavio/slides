@@ -58,11 +58,19 @@
   float: left;
   padding-right: 0px;
 }
+.col-1{
+  width: 100%;
+}
 .col-1-2{
   width: 50%;
 }
 .col-1-3{
   width: 33.33%;
+}
+.url{
+  font-size: 70%;
+  font-family: 'Source Code Pro', 'Courier New', monospace;
+  color: black;
 }
 /* olapic presentation */
 
