@@ -79,7 +79,7 @@ URL: https://code.google.com/p/io-2012-slides
         <br />
         <br />
         <div class="legends">
-          <p class="gray4">Importan tu know:</p>
+          <p class="gray4">Importan to know:</p>
           <ul class="_build">
             <li>{{stream_link}}</li>
             <li>No pagination - yet</li>
@@ -443,6 +443,135 @@ function helloWorld(world) {
   </slide>
   <!-- end Slide Mauri -->
 
+  <!-- Romy's Slides -->
+  <slide>
+    <hgroup>
+      <h2>What is an instance?</h2>
+    </hgroup>
+    <article class="flexbox vcenter">
+      <h2 class="gray3">“A case or particular example”</h2>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Instances</h2>
+    </hgroup>
+    <article>
+      <ul>
+        <li>Its the unique representation of a widget</li>
+        <li>It could be used in multiple pages/sites</li>
+        <li>Once it’s implemented, the configuration is done from our end with no need to change the code on the client side.</li>
+      </ul>
+    </article>
+  </slide>
+
+ <slide>
+    <hgroup>
+      <h2>How to create an instance</h2>
+    </hgroup>
+    <article>
+      <div class="col-1-2 screenSettings imgToTop">A widget is needed or you need to create a Widget in the Appareance Tab </div>
+      <div class="col-1-2 screenSettings imgToTop textCenter "><img src="images/instance/instance-widget-create.png"></div>
+    </article>
+  </slide>
+  <slide>
+    <hgroup>
+    <h2>How to create an instance</h2>
+    </hgroup>
+    <article>
+      <p>On the widget Tab create new instance and name it </p>
+      <img src="images/instance/instance-create.png" class="reflect" alt="Description" title="Description">
+    </article>
+  </slide>
+  <slide>
+    <hgroup>
+      <h2>How to create an instance</h2>
+    </hgroup>
+    <article>
+      <div class="col-1-2 screenSettings imgToTop"><img src="images/instance/instance-select-style.png"></div>
+      <div class="col-1-2 screenSettings imgToTop textCenter "> Select Style from created widgets</div>
+    </article>
+  </slide>
+  <slide>
+    <hgroup>
+      <h2>How to create an instance</h2>
+    </hgroup>
+    <article>
+      <div class="col-1-2 screenSettings imgToTop">
+      <h3>Select Mode</h3>
+      <div class="legends">
+          <p class="gray4">Options:</p>
+          <ul class="_build">
+            <li>By Streams</li>
+            <li>By Category</li>
+            <li>Tag-based</code> 
+             &amp;&amp; <code>(name="photorank:tags" content="")</code></li >
+            <li>Tag-category</li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-1-2 screenSettings imgToTop textCenter "><img src="images/instance/instance-select-mode.png"></div>
+    </article>
+  </slide>
+  <slide>
+    <hgroup>
+    <h2>How to create an instance</h2>
+    </hgroup>
+    <article>
+      <p>Select Sorting Preferences</p>
+     <img src="images/instance/instance-select-preference.png" class="reflect" alt="Description" title="Description">
+    </article>
+  </slide>
+  <slide>
+    <hgroup>
+      <h2>How to create an instance</h2>
+    </hgroup>
+    <article>
+      <div class="col-1-2 screenSettings imgToTop">
+      <h3>Advance Settings </h3>
+      <p class="legends gray4">When development Modes option is checked the olapicForceRender needs to be added to url in order to see the changes in sandbox.</p>
+      </div>
+      <div class="col-1-2 screenSettings imgToTop textCenter "><img src="images/instance/instance-select-mode.png"></div>
+    </article>
+  </slide>
+  <slide>
+    <hgroup>
+    <h2>How to create an instance</h2>
+    </hgroup>
+    <article>
+      <p>Save it and grab the code displayed</p>
+     <img src="images/instance/instance-grab-code.png" class="reflect" alt="Description" title="Description">
+    </article>
+  </slide>
+  <slide>
+    <hgroup>
+      <h2>Multilanguage Support</h2>
+    </hgroup>
+    <article>
+      <div class="">
+        <p class="gray4">In order to show a widget on a specify language we have to hardcode the parameter on the snippet by adding (data-lang="SOMEDEFINEDLANG")
+         </p>
+        </div>
+        <div class="">
+        <pre class="prettyprint" data-lang="html">
+        &lt;id="olapic_specific_widget"&gt;&lt;/div&gt;
+          &lt;script type="text/javascript" 
+          src="//photorankstatics-a.akamaihd.net/81b03e40475846d5883661ff57b34ece
+          /static/frontend/latest/build.min.js" 
+          data-olapic="olapic_specific_widget" 
+          data-instance="d56b79676a1d65f3f56cb455cd943b83" 
+          data-apikey="4b7fcea8cb13c844f7d1de4648bf9a854ea2067d804145010eff543dbb7a0a50"
+          data-lang="fr_FR"&gt;
+        &lt;/script&gt;
+
+      </div>
+    </article>
+  </slide>
+
+
+  <!-- end Romy's  SLides -->
+
 
   <slide>
     <hgroup>
@@ -463,6 +592,7 @@ function helloWorld(world) {
   </slide>
 
   <slide>
+
     <hgroup>
       <h2>Slide with Bullets that Build</h2>
       <h3>Subtitle Placeholder</h3>
