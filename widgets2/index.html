@@ -468,7 +468,6 @@ function helloWorld(world) {
       </ul>
     </article>
   </slide>
-
  <slide>
     <hgroup>
       <h2>How to create an instance</h2>
@@ -480,7 +479,7 @@ function helloWorld(world) {
   </slide>
   <slide>
     <hgroup>
-    <h2>How to create an instance</h2>
+      <h2>How to create an instance</h2>
     </hgroup>
     <article>
       <p>On the widget Tab create new instance and name it </p>
@@ -502,8 +501,8 @@ function helloWorld(world) {
     </hgroup>
     <article>
       <div class="col-1-2 screenSettings imgToTop">
-      <h3>Select Mode</h3>
-      <div class="legends">
+        <h3>Select Mode</h3>
+        <div class="legends">
           <p class="gray4">Options:</p>
           <ul class="_build">
             <li>By Streams</li>
@@ -519,7 +518,7 @@ function helloWorld(world) {
   </slide>
   <slide>
     <hgroup>
-    <h2>How to create an instance</h2>
+      <h2>How to create an instance</h2>
     </hgroup>
     <article>
       <p>Select Sorting Preferences</p>
@@ -532,15 +531,15 @@ function helloWorld(world) {
     </hgroup>
     <article>
       <div class="col-1-2 screenSettings imgToTop">
-      <h3>Advance Settings </h3>
-      <p class="legends gray4">When development Modes option is checked the olapicForceRender needs to be added to url in order to see the changes in sandbox.</p>
+        <h3>Advance Settings </h3>
+        <p class="legends gray4">When development Modes option is checked the olapicForceRender needs to be added to url in order to see the changes in sandbox.</p>
       </div>
       <div class="col-1-2 screenSettings imgToTop textCenter "><img src="images/instance/instance-select-mode.png"></div>
     </article>
   </slide>
   <slide>
     <hgroup>
-    <h2>How to create an instance</h2>
+      <h2>How to create an instance</h2>
     </hgroup>
     <article>
       <p>Save it and grab the code displayed</p>
@@ -553,22 +552,117 @@ function helloWorld(world) {
     </hgroup>
     <article>
       <div class="">
-        <p class="gray4">In order to show a widget on a specify language we have to hardcode the parameter on the snippet by adding (data-lang="SOMEDEFINEDLANG")
-         </p>
-        </div>
-        <div class="">
-        <pre class="prettyprint" data-lang="html">
-        &lt;id="olapic_specific_widget"&gt;&lt;/div&gt;
-          &lt;script type="text/javascript" 
-          src="//photorankstatics-a.akamaihd.net/81b03e40475846d5883661ff57b34ece
-          /static/frontend/latest/build.min.js" 
-          data-olapic="olapic_specific_widget" 
-          data-instance="d56b79676a1d65f3f56cb455cd943b83" 
-          data-apikey="4b7fcea8cb13c844f7d1de4648bf9a854ea2067d804145010eff543dbb7a0a50"
-          data-lang="fr_FR"&gt;
-        &lt;/script&gt;
-
+        <p class="gray4">
+          In order to show a widget on a specify language we have to hardcode the parameter on the snippet by adding (data-lang="SOMEDEFINEDLANG")
+        </p>
       </div>
+        <div class="">
+          <pre class="prettyprint" data-lang="html">
+          &lt;id="olapic_specific_widget"&gt;&lt;/div&gt;
+            &lt;script type="text/javascript" 
+            src="//photorankstatics-a.akamaihd.net/81b03e40475846d5883661ff57b34ece
+            /static/frontend/latest/build.min.js" 
+            data-olapic="olapic_specific_widget" 
+            data-instance="d56b79676a1d65f3f56cb455cd943b83" 
+            data-apikey="4b7fcea8cb13c844f7d1de4648bf9a854ea2067d804145010eff543dbb7a0a50"
+            data-lang="fr_FR"&gt;
+          &lt;/script&gt;
+      </div>
+    </article>
+  </slide>
+  <slide>
+    <hgroup>
+      <h2>Customization addons in Viewer</h2>
+    </hgroup>
+    <article>
+      <h3>Scroll by Page on Related Product's Items </h3>
+      <p class="gray4"> If you need scroll by page add the following code to  data-slide-width="[px to scroll]" to <code>.class="products-list"</code>as follows:
+       </p>
+      <pre class="prettyprint" data-lang="html">
+          &lt;ul class="product-list" data-slide-width="[px to scroll]&gt;&lt;/ul&gt;
+      </pre>
+    </article>
+  </slide>
+  <slide>
+    <hgroup>
+     <h2>Customization addons in Viewer</h2>
+    </hgroup>
+    <article class="smaller">
+      <h3>New class on Related Products wrapper</h3>
+      <p>A new class with the number of related products, this helps us  to hide or show the navigation arrows just with css instead of hidding them with the use of a callback like we used to do</p>
+      <div class="textCenter">
+        <img src="images/customization/customization-viewer-prodnumber.png" class="" alt="Description" title="Description">
+      </div>
+    </article>
+  </slide>
+  <slide>
+    <hgroup>
+      <h2>Customization addons In Slide</h2>
+    </hgroup>
+    <article class="smaller">
+      <h3>New class on Slide's wrapper</h3>
+      <p>A new class  with the total number of items that the slide contains, this helps us when working on partials sliders</p>
+      <div class="textCenter">
+        <img src="images/customization/customization-pdp-itemnum.png" class="" alt="Description" title="Description">  
+      </div>
+    </article>
+  </slide>
+  <slide>
+    <hgroup>
+      <h2>Customization addons In Slide</h2>
+    </hgroup>
+    <article>
+      <h3>User name In Slider</h3>
+      <p>User name in slider does not need to have a callback this can be used just by simply adding <code class="smaller">{{this._embedded.uploader.username}}</code></p>
+      <pre class="prettyprint" data-lang="html">
+          &lt;div&gt; class="olapic-user-info" &lt;/div&gt;
+            &lt;span&gt;Posted by 
+                {{this._embedded.uploader.username}}
+            &lt;/span&gt;
+          &lt;/div&gt;
+      </pre>
+    </article>
+  </slide>
+  <slide>
+    <hgroup>
+      <h2>Customization addons In Uploader</h2>
+    </hgroup>
+    <article>
+      <h3>New Modal tpl</h3>
+      <div class="col-1-2 screenSettings imgToTop">
+        <p>
+          New Modal tpl created so that way we have more control over elements outside iframe, such as closing button and overlay
+        </p>
+      </div>
+      <div class="col-1-2 screenSettings imgToTop"><img src="images/customization/customization-uploader-modal-tpl.png" class="reflect" alt="Description" title="Description"></div>
+      </pre>
+    </article>
+  </slide>
+  <slide>
+    <hgroup>
+      <h2>Customization addons In Uploader</h2>
+    </hgroup>
+    <article>
+      <h3>Uploader Sources markup</h3>
+      <p>
+        The new structure gives the flexibility to order, change or even remove the souce's options. The new code for Source Selection is as follows:
+      </p>
+      <pre class="prettyprint" data-lang="html">
+        &lt;div&gt;class="upload-sources-splash"&gt;
+          &lt;ul&gt;
+            &lt;li&gt;
+              &lt;a class="olapic_base_bt_harddrive base-btn olapic-icon-harddrive" 
+              rel="harddrive" href="{$siteUrl}/uploader/{$owner->user_dir}/upload/
+              harddrive?gallery={$galleryId}&customer_id={$customerId}&
+              context={$context}&widget_config={$widget_config}&lang={$lang}"&gt;
+                Computer
+              &lt;/a&gt;
+            &lt;/li&gt;
+           ......
+          &lt;/ul&gt;
+         ...
+        &lt;/div&gt; <!-- end of .upload-sources-splash -->
+      </pre>
     </article>
   </slide>
 
