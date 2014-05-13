@@ -60,8 +60,8 @@ URL: https://code.google.com/p/io-2012-slides
   <slide>
     <article class="smaller">
       <h2>Won</h2>
-      <div class="col-1-3 screenSettings imgToTop textCenter">
-       <h3>Reduced the amount files loaded</3>
+      <div class="col-1-3 screenSettings imgToTop ">
+       <h3>Reduced files loaded</3>
          <ul>
           <li>Pre build  23</li>
           <li>Build 7</li>
@@ -78,15 +78,15 @@ URL: https://code.google.com/p/io-2012-slides
         </ul>
         <img src="images/graphics/graphics-size.png">
       </div>
-      <div class="col-1-3 screenSettings imgToTop textCenter ">
+      <div class="col-1-3 screenSettings imgToTop">
         <h3>Loading time reduced</h3>
         <ul>
           <li>Before build 4.305s</li>
           <li>Build 3.863s</li>
           <li>widget v2 3.863s</li>
         </ul>
-        <span class"legend">*Time up start render</span>
         <img src="images/graphics/graphics-load-time.png">
+        <span class"">*Time up start render</span>
       </div>
       
     </article>
@@ -189,13 +189,13 @@ URL: https://code.google.com/p/io-2012-slides
             <li>Picture resolution</li>
             <li>Sorting: Isotope</li>
             <li>Open next page on a new window</li>
-            <li>Scroll on window (no more opcional)</li>
+            <li>Scroll on window (no longer opcional)</li>
           </ul>
         </div>
         <br />
         <br />
         <div class="legends">
-          <p class="gray4">Importan tu know:</p>
+          <p class="gray4">Importan t0 know:</p>
           <ul class="_build">
             <li>Filters are independant from the instance's setting</li>
             <li>You can use both, streams and categories</li>
@@ -464,60 +464,9 @@ URL: https://code.google.com/p/io-2012-slides
   </article>
 </slide>
 
-<slide>
-  <hgroup>
-    <h2>Code Slide (with Subtitle Placeholder)</h2>
-    <h3>Subtitle Placeholder</h3>
-  </hgroup>
-  <article>
-    <p>Press 'h' to highlight important sections of code (wrapped in <code>&lt;b&gt;</code>).</p>
-    <pre class="prettyprint" data-lang="javascript">
-      &lt;script type='text/javascript'&gt;
-      // Say hello world until the user starts questioning
-      // the meaningfulness of their existence.
-      function helloWorld(world) {
-      <b>for (var i = 42; --i &gt;= 0;) {
-        alert('Hello ' + String(world));
-      }</b>
-    }
-    &lt;/script&gt;
-  </pre>
-</article>
-</slide>
 
-<slide>
-  <hgroup>
-    <h2>Code Slide (Smaller Font)</h2>
-  </hgroup>
-  <article class="smaller">
-    <pre class="prettyprint" data-lang="javascript">
-      // Say hello world until the user starts questioning
-      // the meaningfulness of their existence.
-      function helloWorld(world) {
-      for (var i = 42; --i &gt;= 0;) {
-      alert('Hello ' + String(world));
-    }
-  }
-</pre>
-<pre class="prettyprint" data-lang="css">
-  &lt;style&gt;
-  p { color: pink }
-  b { color: blue }
-  &lt;/style&gt;
-</pre>
-<pre class="prettyprint" data-lang="html">
-  &lt;!DOCTYPE html>
-  &lt;html>
-  &lt;head>
-  &lt;title>My Awesome Page&lt;/title>
-  &lt;/head>
-  &lt;body>
-  &lt;p&gt;Hello world&lt;/p&gt;
-  &lt;body>
-  &lt;/html>
-</pre>
-</article>
-</slide>
+
+
 <!-- end Slide Mauri -->
 
 <!-- Romy's Slides -->
@@ -608,7 +557,7 @@ URL: https://code.google.com/p/io-2012-slides
       <h3>Advance Settings </h3>
       <p class="legends gray4">When development Modes option is checked the olapicForceRender needs to be added to url in order to see the changes in sandbox.</p>
     </div>
-    <div class="col-1-2 screenSettings imgToTop textCenter "><img src="images/instance/instance-select-mode.png"></div>
+    <div class="col-1-2 screenSettings imgToTop textCenter "><img src="images/instance/instance-widget-advanced.png"></div>
   </article>
 </slide>
 <slide>
@@ -627,7 +576,7 @@ URL: https://code.google.com/p/io-2012-slides
   <article>
     <div class="">
       <p class="gray4">
-        In order to show a widget on a specify language we have to hardcode the parameter on the snippet by adding (data-lang="SOMEDEFINEDLANG")
+        <!-- In order to show a widget on a specify language we have to hardcode the parameter on the snippet by adding (data-lang="SOMEDEFINEDLANG") -->
       </p>
     </div>
     <div class="">
@@ -650,8 +599,8 @@ URL: https://code.google.com/p/io-2012-slides
     </hgroup>
     <article>
       <h3>Scroll by Page on Related Product's Items </h3>
-      <p class="gray4"> If you need scroll by page add the following code to  data-slide-width="[px to scroll]" to <code>.class="products-list"</code>as follows:
-      </p>
+      <!-- <p class="gray4"> If you need scroll by page add the following code to  data-slide-width="[px to scroll]" to <code>.class="products-list"</code>as follows:
+      </p> -->
       <pre class="prettyprint" data-lang="html">
         &lt;ul class="product-list" data-slide-width="[px to scroll]&gt;&lt;/ul&gt;
       </pre>
@@ -663,7 +612,7 @@ URL: https://code.google.com/p/io-2012-slides
    </hgroup>
    <article class="smaller">
     <h3>New class on Related Products wrapper</h3>
-    <p>A new class with the number of related products, this helps us  to hide or show the navigation arrows just with css instead of hidding them with the use of a callback like we used to do. By default navs are going to be shown when there are more than two images.</p>
+    <!-- <p>A new class with the number of related products, this helps us  to hide or show the navigation arrows just with css instead of hidding them with the use of a callback like we used to do. By default navs are going to be shown when there are more than two images.</p> -->
     <div class="textCenter">
       <img src="images/customization/customization-viewer-prodnumber.png" class="" alt="Description" title="Description">
     </div>
@@ -675,7 +624,7 @@ URL: https://code.google.com/p/io-2012-slides
   </hgroup>
   <article class="smaller">
     <h3>New class on Slide's wrapper</h3>
-    <p>A new class  with the total number of items that the slide contains, this helps us when working on partials sliders</p>
+    <!-- <p>A new class  with the total number of items that the slide contains, this helps us when working on partials sliders</p> -->
     <div class="textCenter">
       <img src="images/customization/customization-pdp-itemnum.png" class="" alt="Description" title="Description">  
     </div>
@@ -687,7 +636,7 @@ URL: https://code.google.com/p/io-2012-slides
   </hgroup>
   <article>
     <h3>User name In Slider</h3>
-    <p>User name in slider does not need to have a callback this can be used just by simply adding <code class="smaller">{{this._embedded.uploader.username}}</code></p>
+    <!--  -->
     <pre class="prettyprint" data-lang="html">
       &lt;div&gt; class="olapic-user-info" &lt;/div&gt;
       &lt;span&gt;Posted by 
@@ -703,12 +652,12 @@ URL: https://code.google.com/p/io-2012-slides
   </hgroup>
   <article>
     <h3>New Modal tpl</h3>
-    <div class="col-1-2 screenSettings imgToTop">
+    <!-- <div class="col-1-2 screenSettings imgToTop">
       <p>
         New Modal tpl created so that way we have more control over elements outside iframe, such as closing button and overlay
       </p>
-    </div>
-    <div class="col-1-2 screenSettings imgToTop"><img src="images/customization/customization-uploader-modal-tpl.png" class="reflect" alt="Description" title="Description"></div>
+    </div> -->
+    <div class="screenSettings imgToTop textCenter"><img src="images/customization/customization-uploader-modal-tpl.png" class="reflect" alt="Description" title="Description"></div>
   </pre>
 </article>
 </slide>
@@ -745,7 +694,7 @@ URL: https://code.google.com/p/io-2012-slides
 <!-- Final Slides -->
 
 
-<slide>
+<!-- <slide>
   <hgroup>
     <h2>Ok, what's now</h2>
   </hgroup>
@@ -766,7 +715,7 @@ URL: https://code.google.com/p/io-2012-slides
   <article>
     <img src="https://scontent-a-lga.xx.fbcdn.net/hphotos-frc3/t1.0-9/1488881_10152062656153655_1766557561_n.jpg" />
   </article>
-</slide>
+</slide> -->
 
 
 <!-- End Final Slides -->
