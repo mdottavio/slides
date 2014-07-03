@@ -1,0 +1,175 @@
+/* apply a natural box layout model to all elements */
+#olapic-logo *, #olapic-logo *:before, #olapic-logo *:after {
+    -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+}
+#olapic-logo div { overflow: hidden; }
+#olapic-logo{
+    height: 160px;
+    width: 160px;
+}
+.icons{ height: 23.3%; /* background: white; */ position: relative;}
+.icons-sub{ height: 10.34%; /* background: white; */ position: relative;}
+.camara-head{ height: 10.34%; overflow: hidden; position: relative;}
+.camara-top{ height: 5%; background: white; }
+.camara-body{ height: 48%; background: white;}
+.camara-bottom{ height: 8.3%; background: white; }
+.camara-top{
+    -webkit-border-top-left-radius: 10px;
+    -webkit-border-top-right-radius: 10px;
+    -moz-border-radius-topleft: 10px;
+    -moz-border-radius-topright: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.camara-head div{
+    float: left;
+    height: 100%;
+    position: relative;
+}
+.camara-head div.control1,
+.camara-head div.control3{
+    width: 31.03%;
+}
+.camara-head div.control2{
+    width: 37.93%;
+    background: white;   
+    border-radius: 14% 14% 0% 10%/33% 33% 0% 0%;
+}
+.camara-head div.control1:before,
+.camara-head div.control1:after,
+.camara-head div.control3:before{
+    content: "";
+    display: block;
+    background: white;
+    position: absolute;
+}
+.camara-head div.control1:before,
+.camara-head div.control3:before{
+    width: 44.44%;
+    height: 66.66%;
+    bottom: 0px;
+}
+.camara-head div.control3:before{
+    left: 33.33%;
+}
+.camara-head div.control1:before{
+    left: 22.22%;
+    border-radius: 90% 74% 10% 10%/150% 0% 0% 0%;
+}
+.camara-head div.control1:after{
+    width: 22.22%;
+    height: 35.33%;
+    bottom: 0px;
+    left: 34.33%;
+    top: 0%;
+    background:white;
+}
+.camara-body:before{
+    content: "\26AC";
+    position: relative;
+    width: 100%;
+    height: 100%;
+    color: black;
+    display: block;
+    font-size: 10em;
+    left: 21.31%;
+    top: -119%;
+}
+.camara-bottom{
+    -webkit-border-bottom-right-radius: 10px;
+    -webkit-border-bottom-left-radius: 10px;
+    -moz-border-radius-bottomright: 10px;
+    -moz-border-radius-bottomleft: 10px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.icons div{
+    background: red;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    text-align: center;
+    font-size: 1.2em;
+}
+.icons-sub div{
+/*     background: yellow; */
+}
+.icons div, 
+.icons-sub div{
+    float: left;
+    height: 100%;
+    width: 31%;
+    margin-right: 3.4%;
+    position: relative;
+}
+
+.icons div.hash,
+.icons-sub div.hash{
+    margin-right: 0%;
+    position: absolute;
+    width: 32%;
+    right: 0%;
+}
+.icons div.stats { background: #ED1555; }
+
+.icons div.stats:before { 
+    content: "\2581\0020\2583\0020\2585\0020\2588";  
+/* ÃƒÂ¢Ã¢â‚¬â€œÃ‚Â ÃƒÂ¢Ã¢â‚¬â€œÃ†â€™ ÃƒÂ¢Ã¢â‚¬â€œÃ¢â‚¬Â¦ ÃƒÂ¢Ã¢â‚¬â€œÃ¢â‚¬Â¡ ÃƒÂ¢Ã¢â‚¬â€œÃ‹â€  */
+    font-size: 0.1em; 
+    top: 40%;
+ }
+
+.icons div.core { background: #73C166; }
+.icons div.core:before { content: "\2764";}
+
+.icons div.hash { background: #00A4E3; }
+.icons div.hash:before { content: "\0023"; font-size: 1.2em; font-weight: bold;}
+
+.icons div:before {
+    top: 14%; 
+    position: relative; 
+    font-size: 1.6em;
+}
+.icons-sub div:before {
+    content: "";
+    position: absolute;
+}
+.icons-sub div.stats:before{
+    background: linear-gradient(to left bottom, #ED1555 50%, transparent 50%);
+    left: 60%;
+    top: 0px;
+}
+.icons-sub div.core:before{
+    background: linear-gradient(to right bottom, #73C166 53%, transparent 50%), linear-gradient(to left bottom, #73C166 50%, transparent 50%);
+    background-position: -7% 0px, -5% 0px;
+    left: 60%;
+    top: 0px;
+}
+.icons-sub div.hash:before{
+    background: linear-gradient(to right bottom, #00A4E3 50%, transparent 50%);
+    left: 10%; 
+    top: 0px;
+}
+
+.icons-sub div.stats:before,
+.icons-sub div.core:before,
+.icons-sub div.hash:before{
+    width: 26%;
+    height: 66%;
+}
+/*
+(8*100)/18
+
+
+
+60 > 100
+14
+
+58 > 100
+14
+ */
+
+body{
+    background: black;
+}
