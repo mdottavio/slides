@@ -2,17 +2,17 @@
 #olapic-logo *, #olapic-logo *:before, #olapic-logo *:after {
     -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
 }
-#olapic-logo div { overflow: hidden; }
+#olapic-logo div { /* overflow: hidden; */ }
 #olapic-logo{
     height: 160px;
     width: 160px;
 }
-.icons{ height: 23.3%; /* background: white; */ position: relative;}
-.icons-sub{ height: 10.34%; /* background: white; */ position: relative;}
+.icons{ height: 23.3%; /* background: #FFFFFF; */ position: relative;}
+.icons-sub{ height: 10.34%; /* background: #FFFFFF; */ position: relative;}
 .camara-head{ height: 10.34%; overflow: hidden; position: relative;}
-.camara-top{ height: 5%; background: white; }
-.camara-body{ height: 48%; background: white;}
-.camara-bottom{ height: 8.3%; background: white; }
+.camara-top{ height: 5%; background: #FFFFFF; }
+.camara-body{ height: 48%; background: #FFFFFF;}
+.camara-bottom{ height: 8.3%; background: #FFFFFF; }
 .camara-top{
     -webkit-border-top-left-radius: 10px;
     -webkit-border-top-right-radius: 10px;
@@ -32,7 +32,7 @@
 }
 .camara-head div.control2{
     width: 37.93%;
-    background: white;   
+    background: #FFFFFF;   
     border-radius: 14% 14% 0% 10%/33% 33% 0% 0%;
 }
 .camara-head div.control1:before,
@@ -40,7 +40,7 @@
 .camara-head div.control3:before{
     content: "";
     display: block;
-    background: white;
+    background: #FFFFFF;
     position: absolute;
 }
 .camara-head div.control1:before,
@@ -62,7 +62,7 @@
     bottom: 0px;
     left: 34.33%;
     top: 0%;
-    background:white;
+    background:#FFFFFF;
 }
 .camara-body:before{
     content: "\26AC";
@@ -111,20 +111,51 @@
     width: 32%;
     right: 0%;
 }
-.icons div.stats { background: #ED1555; }
+.icons div.stats { background: #ED1555; font-size: 2px;}
+.icons div.stats i {
+    display:block;
+    width: 1em;
+    height: 1em;
+    background: #FCCFDC;
+    position:absolute;
+    left: 5em;
+    bottom: 4em;
+    box-shadow: 0em -1em 0em 0em #FCCFDC, 1em 0em 0em 0em #FFFFFF, 1em -1em 0em 0em #FFFFFF, 2em 0em 0em 0em #F35688, 2em -1em 0em 0em #F35688,
+    4em 0em 0em 0em #FCCFDC, 4em -1em 0em 0em #FCCFDC, 4em -2em 0em 0em #FCCFDC, 4em -3em 0em 0em #FCCFDC,
+    5em 0em 0em 0em #FFFFFF, 5em -1em 0em 0em #FFFFFF, 5em -2em 0em 0em #FFFFFF, 5em -3em 0em 0em #FFFFFF,
+    6em 0em 0em 0em #F35688, 6em -1em 0em 0em #F35688, 6em -2em 0em 0em #F35688, 6em -3em 0em 0em #F35688,
+    8em 0em 0em 0em #FCCFDC, 8em -1em 0em 0em #FCCFDC, 8em -2em 0em 0em #FCCFDC, 8em -3em 0em 0em #FCCFDC, 8em -4em 0em 0em #FCCFDC, 8em -5em 0em 0em #FCCFDC,
+    9em 0em 0em 0em #FFFFFF, 9em -1em 0em 0em #FFFFFF, 9em -2em 0em 0em #FFFFFF, 9em -3em 0em 0em #FFFFFF, 9em -4em 0em 0em #FFFFFF, 9em -5em 0em 0em #FFFFFF,
+    10em 0em 0em 0em #F35688, 10em -1em 0em 0em #F35688, 10em -2em 0em 0em #F35688, 10em -3em 0em 0em #F35688, 10em -4em 0em 0em #F35688, 10em -5em 0em 0em #F35688,
+    12em 0em 0em 0em #FCCFDC, 12em -1em 0em 0em #FCCFDC, 12em -2em 0em 0em #FCCFDC, 12em -3em 0em 0em #FCCFDC, 12em -4em 0em 0em #FCCFDC, 12em -5em 0em 0em #FCCFDC, 12em -6em 0em 0em #FCCFDC, 12em -7em 0em 0em #FCCFDC,
+    13em 0em 0em 0em #FFFFFF, 13em -1em 0em 0em #FFFFFF, 13em -2em 0em 0em #FFFFFF, 13em -3em 0em 0em #FFFFFF, 13em -4em 0em 0em #FFFFFF, 13em -5em 0em 0em #FFFFFF, 13em -6em 0em 0em #FFFFFF, 13em -7em 0em 0em #FFFFFF,
+    14em 0em 0em 0em #F35688, 14em -1em 0em 0em #F35688, 14em -2em 0em 0em #F35688, 14em -3em 0em 0em #F35688, 14em -4em 0em 0em #F35688, 14em -5em 0em 0em #F35688, 14em -6em 0em 0em #F35688, 14em -7em 0em 0em #F35688;
+}
 
-.icons div.stats:before { 
+/* .icons div.stats:before { 
     content: "\2581\0020\2583\0020\2585\0020\2588";  
-/* ÃƒÂ¢Ã¢â‚¬â€œÃ‚Â ÃƒÂ¢Ã¢â‚¬â€œÃ†â€™ ÃƒÂ¢Ã¢â‚¬â€œÃ¢â‚¬Â¦ ÃƒÂ¢Ã¢â‚¬â€œÃ¢â‚¬Â¡ ÃƒÂ¢Ã¢â‚¬â€œÃ‹â€  */
     font-size: 0.1em; 
     top: 40%;
- }
+ } */
 
-.icons div.core { background: #73C166; }
+.icons div.core { background: #73C166; display: none; }
 .icons div.core:before { content: "\2764";}
 
-.icons div.hash { background: #00A4E3; }
-.icons div.hash:before { content: "\0023"; font-size: 1.2em; font-weight: bold;}
+.icons div.hash { background: #00A4E3; font-size: 2px;}
+.icons div.hash i {
+    display:block;
+    width: 1em;
+    height: 1em;
+    background: black;
+    position:absolute;
+    left: 6em;
+    top: 4em;
+    box-shadow: 0em 2em 0em 0em #D8F1FB, 0em 3em 0em 0em #D8F1FB, 0em 6em 0em 0em #D8F1FB, 0em 7em 0em 0em #D8F1FB, 2em 0em 0em 0em #D8F1FB, 2em 1em 0em 0em #D8F1FB, 2em 4em 0em 0em #D8F1FB, 2em 5em 0em 0em #D8F1FB, 2em 8em 0em 0em #D8F1FB, 2em 9em 0em 0em #D8F1FB,
+    
+    
+    1em 2em 0em 0em #FFFFFF, 1em 3em 0em 0em #FFFFFF, 1em 6em 0em 0em #FFFFFF, 1em 7em 0em 0em #FFFFFF, 2em 2em 0em 0em #FFFFFF, 2em 3em 0em 0em #FFFFFF, 2em 6em 0em 0em #FFFFFF, 2em 7em 0em 0em #FFFFFF, 3em 0em 0em 0em #FFFFFF, 3em 1em 0em 0em #FFFFFF, 3em 2em 0em 0em #FFFFFF, 3em 3em 0em 0em #FFFFFF, 3em 4em 0em 0em #FFFFFF, 3em 5em 0em 0em #FFFFFF, 3em 6em 0em 0em #FFFFFF, 1em 7em 0em 0em #FFFFFF, 2em 7em 0em 0em #FFFFFF, 3em 7em 0em 0em #FFFFFF, 3em 8em 0em 0em #FFFFFF, 3em 9em 0em 0em #FFFFFF, 7em 1em 0em 0em #FFFFFF, 7em 2em 0em 0em #FFFFFF, 7em 7em 0em 0em #FFFFFF, 7em 4em 0em 0em #FFFFFF, 7em 5em 0em 0em #FFFFFF, 7em 6em 0em 0em #FFFFFF, 7em 7em 0em 0em #FFFFFF, 7em 8em 0em 0em #FFFFFF, 7em 9em 0em 0em #FFFFFF;
+}
+/* .icons div.hash:before { content: "\0023"; font-size: 1.2em; font-weight: bold;} */
 
 .icons div:before {
     top: 14%; 
@@ -171,5 +202,6 @@
  */
 
 body{
-    background: black;
+    background: yellowgreen;
+    padding: 100px
 }
