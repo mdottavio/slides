@@ -3,13 +3,13 @@
     -moz-box-sizing: border-box; 
     -webkit-box-sizing: border-box; box-sizing: border-box;
 } */
-#olapic-logo div { /* overflow: hidden; */ }
+#olapic-logo div { overflow: hidden; }
 #olapic-logo{
     height: 160px;
     width: 160px;
 }
-.icons{ height: 23.3%; /* background: #FFFFFF; */ position: relative;}
-.icons-sub{ height: 10.34%; /* background: #FFFFFF; */ position: relative;}
+.icons{ height: 23.3%; position: relative;}
+.icons-sub{ height: 10.34%; position: relative;}
 .camara-head{ height: 10.34%; overflow: hidden; position: relative;}
 .camara-top{ height: 5%; background: #FFFFFF; }
 .camara-body{ height: 48%; background: #FFFFFF;}
@@ -129,16 +129,7 @@
     13em 0em 0em 0em #FFFFFF, 13em -1em 0em 0em #FFFFFF, 13em -2em 0em 0em #FFFFFF, 13em -3em 0em 0em #FFFFFF, 13em -4em 0em 0em #FFFFFF, 13em -5em 0em 0em #FFFFFF, 13em -6em 0em 0em #FFFFFF, 13em -7em 0em 0em #FFFFFF,
     14em 0em 0em 0em #F35688, 14em -1em 0em 0em #F35688, 14em -2em 0em 0em #F35688, 14em -3em 0em 0em #F35688, 14em -4em 0em 0em #F35688, 14em -5em 0em 0em #F35688, 14em -6em 0em 0em #F35688, 14em -7em 0em 0em #F35688;
 }
-
-/* .icons div.stats:before { 
-    content: "\2581\0020\2583\0020\2585\0020\2588";  
-    font-size: 0.1em; 
-    top: 40%;
- } */
-
 .icons div.core { background: #73C166; font-size: 2px;}
-/* .icons div.core:before { content: "\2764";} */
-
 .icons div.core i {
     display:block;
     width: 1em;
@@ -178,8 +169,6 @@
     4em 2em 0em 0em #FFFFFF, 4em 3em 0em 0em #FFFFFF, 5em 2em 0em 0em #FFFFFF, 5em 3em 0em 0em #FFFFFF, 6em 2em 0em 0em #FFFFFF, 6em 3em 0em 0em #FFFFFF, 8em 2em 0em 0em #FFFFFF, 8em 3em 0em 0em #FFFFFF, 9em 2em 0em 0em #FFFFFF, 9em 3em 0em 0em #FFFFFF,
     4em 6em 0em 0em #FFFFFF, 4em 7em 0em 0em #FFFFFF, 5em 6em 0em 0em #FFFFFF, 5em 7em 0em 0em #FFFFFF, 6em 6em 0em 0em #FFFFFF, 6em 7em 0em 0em #FFFFFF, 8em 6em 0em 0em #FFFFFF, 8em 7em 0em 0em #FFFFFF, 9em 6em 0em 0em #FFFFFF, 9em 7em 0em 0em #FFFFFF;
 }
-/* .icons div.hash:before { content: "\0023"; font-size: 1.2em; font-weight: bold;} */
-
 .icons div:before {
     top: 14%; 
     position: relative; 
@@ -201,7 +190,6 @@
     left: 52%;
     top: -20%;
 }
-
 .icons-sub div.core:after{
     background: linear-gradient(to left bottom, #73C166 50%, transparent 50%);
     left: 26%;
@@ -212,7 +200,6 @@
     left: 10%; 
     top: 0px;
 }
-
 .icons-sub div.stats:before,
 .icons-sub div.core:before,
 .icons-sub div.core:after,
