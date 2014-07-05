@@ -1,0 +1,293 @@
+/*---------------------------------------------------
+    LESS Elements 0.9
+  ---------------------------------------------------
+    A set of useful LESS mixins
+    More info at: http://lesselements.com
+  ---------------------------------------------------*/
+/* apply a natural box layout model to all elements */
+body {
+  background: #5b83ad;
+  padding: 100px;
+}
+#olapic-logo *,
+#olapic-logo *:before,
+#olapic-logo *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+#olapic-logo div {
+  overflow: hidden;
+}
+#olapic-logo {
+  height: 120;
+  width: 120;
+  font-size: 1.2;
+}
+/** end camara **/
+.camara-head {
+  height: 10.34%;
+  overflow: hidden;
+  position: relative;
+}
+.camara-top {
+  height: 5%;
+  background: #ffffff;
+}
+.camara-body {
+  height: 48%;
+  background: #ffffff;
+}
+.camara-bottom {
+  height: 8.3%;
+  background: #ffffff;
+}
+.camara-top {
+  -webkit-border-top-right-radius: 10px;
+  -webkit-border-bottom-right-radius: 0;
+  -webkit-border-bottom-left-radius: 0;
+  -webkit-border-top-left-radius: 10px;
+  -moz-border-radius-topright: 10px;
+  -moz-border-radius-bottomright: 0;
+  -moz-border-radius-bottomleft: 0;
+  -moz-border-radius-topleft: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 10px;
+  -moz-background-clip: padding-box;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+}
+.camara-head div {
+  float: left;
+  height: 100%;
+  position: relative;
+}
+.camara-head div.control1,
+.camara-head div.control3 {
+  width: 31.03%;
+}
+.camara-head div.control2 {
+  width: 37.93%;
+  background: #ffffff;
+  -webkit-border-top-left-radius: 14% 33%;
+  -webkit-border-top-right-radius: 14% 33%;
+  -webkit-border-bottom-right-radius: 0% 0%;
+  -webkit-border-bottom-left-radius: 0% 0%;
+  -moz-border-radius-topleft: 14% 33%;
+  -moz-border-radius-topright: 14% 33%;
+  -moz-border-radius-bottomright: 0% 0%;
+  -moz-border-radius-bottomleft: 0% 0%;
+  border-top-left-radius: 14% 33%;
+  border-top-right-radius: 14% 33%;
+  border-bottom-right-radius: 0% 0%;
+  border-bottom-left-radius: 0% 0%;
+}
+.camara-head div.control1:before,
+.camara-head div.control1:after,
+.camara-head div.control3:before {
+  content: "";
+  display: block;
+  background: #ffffff;
+  position: absolute;
+}
+.camara-head div.control1:before,
+.camara-head div.control3:before {
+  width: 44.44%;
+  height: 66.66%;
+  bottom: 0px;
+}
+.camara-head div.control3:before {
+  left: 33.33%;
+}
+.camara-head div.control1:before {
+  left: 22.22%;
+  -webkit-border-top-left-radius: 90% 277%;
+  -webkit-border-top-right-radius: 74% 0%;
+  -webkit-border-bottom-right-radius: 0% 0%;
+  -webkit-border-bottom-left-radius: 0% 0%;
+  -moz-border-radius-topleft: 90% 277%;
+  -moz-border-radius-topright: 74% 0%;
+  -moz-border-radius-bottomright: 0% 0%;
+  -moz-border-radius-bottomleft: 0% 0%;
+  border-top-left-radius: 90% 277%;
+  border-top-right-radius: 74% 0%;
+  border-bottom-right-radius: 0% 0%;
+  border-bottom-left-radius: 0% 0%;
+  /*border-radius: 90% 74% 10% 10%/150% 0% 0% 0%;*/
+}
+.camara-head div.control1:after {
+  width: 22.22%;
+  height: 35.33%;
+  bottom: 0px;
+  left: 34.33%;
+  top: 0%;
+  background: #ffffff;
+}
+.camara-body:before {
+  content: "\26AC";
+  position: relative;
+  width: 100%;
+  height: 100%;
+  color: #5b83ad;
+  display: block;
+  font-size: 99em;
+  text-align: center;
+  /*font-size: 153px;*/
+  /*left: 21.31%;*/
+  top: -117%;
+}
+.camara-bottom {
+  -webkit-border-top-right-radius: 0;
+  -webkit-border-bottom-right-radius: 10px;
+  -webkit-border-bottom-left-radius: 10px;
+  -webkit-border-top-left-radius: 0;
+  -moz-border-radius-topright: 0;
+  -moz-border-radius-bottomright: 10px;
+  -moz-border-radius-bottomleft: 10px;
+  -moz-border-radius-topleft: 0;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-top-left-radius: 0;
+  -moz-background-clip: padding-box;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+}
+/** end camara **/
+/** icons first line **/
+.icons {
+  height: 23.3%;
+  position: relative;
+}
+.icons div {
+  background: red;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  text-align: center;
+  font-size: 1.2em;
+}
+.icons div,
+.icons-sub div {
+  float: left;
+  height: 100%;
+  width: 31%;
+  margin-right: 3.4%;
+  position: relative;
+}
+.icons div.hash,
+.icons-sub div.hash {
+  margin-right: 0%;
+  position: absolute;
+  width: 32%;
+  right: 0%;
+}
+.icons div.stats {
+  background: #ED1555;
+  /* font-size: 2px;*/
+}
+.icons div.stats i {
+  display: block;
+  width: 1em;
+  height: 1em;
+  background: #FCCFDC;
+  position: absolute;
+  left: 5em;
+  bottom: 4em;
+  box-shadow: 0em -1em 0em 0em #fccfdc, 1em 0em 0em 0em #ffffff, 1em -1em 0em 0em #ffffff, 2em 0em 0em 0em #f35688, 2em -1em 0em 0em #f35688, 4em 0em 0em 0em #fccfdc, 4em -1em 0em 0em #fccfdc, 4em -2em 0em 0em #fccfdc, 4em -3em 0em 0em #fccfdc, 5em 0em 0em 0em #ffffff, 5em -1em 0em 0em #ffffff, 5em -2em 0em 0em #ffffff, 5em -3em 0em 0em #ffffff, 6em 0em 0em 0em #f35688, 6em -1em 0em 0em #f35688, 6em -2em 0em 0em #f35688, 6em -3em 0em 0em #f35688, 8em 0em 0em 0em #fccfdc, 8em -1em 0em 0em #fccfdc, 8em -2em 0em 0em #fccfdc, 8em -3em 0em 0em #fccfdc, 8em -4em 0em 0em #fccfdc, 8em -5em 0em 0em #fccfdc, 9em 0em 0em 0em #ffffff, 9em -1em 0em 0em #ffffff, 9em -2em 0em 0em #ffffff, 9em -3em 0em 0em #ffffff, 9em -4em 0em 0em #ffffff, 9em -5em 0em 0em #ffffff, 10em 0em 0em 0em #f35688, 10em -1em 0em 0em #f35688, 10em -2em 0em 0em #f35688, 10em -3em 0em 0em #f35688, 10em -4em 0em 0em #f35688, 10em -5em 0em 0em #f35688, 12em 0em 0em 0em #fccfdc, 12em -1em 0em 0em #fccfdc, 12em -2em 0em 0em #fccfdc, 12em -3em 0em 0em #fccfdc, 12em -4em 0em 0em #fccfdc, 12em -5em 0em 0em #fccfdc, 12em -6em 0em 0em #fccfdc, 12em -7em 0em 0em #fccfdc, 13em 0em 0em 0em #ffffff, 13em -1em 0em 0em #ffffff, 13em -2em 0em 0em #ffffff, 13em -3em 0em 0em #ffffff, 13em -4em 0em 0em #ffffff, 13em -5em 0em 0em #ffffff, 13em -6em 0em 0em #ffffff, 13em -7em 0em 0em #ffffff, 14em 0em 0em 0em #f35688, 14em -1em 0em 0em #f35688, 14em -2em 0em 0em #f35688, 14em -3em 0em 0em #f35688, 14em -4em 0em 0em #f35688, 14em -5em 0em 0em #f35688, 14em -6em 0em 0em #f35688, 14em -7em 0em 0em #f35688;
+}
+.icons div.core {
+  background: #73C166;
+  /* font-size: 2px;*/
+}
+.icons div.core i {
+  display: block;
+  width: 1em;
+  height: 1em;
+  background: #73c166;
+  position: absolute;
+  left: 6em;
+  top: 5em;
+  box-shadow: 0em 0em 0em 0em #73c166, 0em 1em 0em 0em #96d08c, 0em 2em 0em 0em #e2f2df, 0em 3em 0em 0em #e8f5e6, 0em 4em 0em 0em #c3e4bd, 0em 5em 0em 0em #82c876, 0em 6em 0em 0em #73c166, 0em 7em 0em 0em #73c166, 0em 8em 0em 0em #73c166, 0em 9em 0em 0em #73c166, 1em 0em 0em 0em #79c46d, 1em 1em 0em 0em #f6fbf5, 1em 2em 0em 0em #ffffff, 1em 3em 0em 0em #ffffff, 1em 4em 0em 0em #ffffff, 1em 5em 0em 0em #f5fbf4, 1em 6em 0em 0em #99d290, 1em 7em 0em 0em #73c166, 1em 8em 0em 0em #73c166, 1em 9em 0em 0em #73c166, 2em 0em 0em 0em #94d08b, 2em 1em 0em 0em #ffffff, 2em 2em 0em 0em #ffffff, 2em 3em 0em 0em #ffffff, 2em 4em 0em 0em #ffffff, 2em 5em 0em 0em #ffffff, 2em 6em 0em 0em #fcfefb, 2em 7em 0em 0em #9cd392, 2em 8em 0em 0em #73c166, 2em 9em 0em 0em #73c166, 3em 0em 0em 0em #8ecd84, 3em 1em 0em 0em #ffffff, 3em 2em 0em 0em #ffffff, 3em 3em 0em 0em #ffffff, 3em 4em 0em 0em #ffffff, 3em 5em 0em 0em #ffffff, 3em 6em 0em 0em #ffffff, 3em 7em 0em 0em #f8fcf8, 3em 8em 0em 0em #8bcb80, 3em 9em 0em 0em #73c166, 4em 0em 0em 0em #75c268, 4em 1em 0em 0em #f4faf3, 4em 2em 0em 0em #ffffff, 4em 3em 0em 0em #ffffff, 4em 4em 0em 0em #ffffff, 4em 5em 0em 0em #ffffff, 4em 6em 0em 0em #ffffff, 4em 7em 0em 0em #ffffff, 4em 8em 0em 0em #e6f4e4, 4em 9em 0em 0em #77c36b, 5em 0em 0em 0em #73c166, 5em 1em 0em 0em #b5deaf, 5em 2em 0em 0em #ffffff, 5em 3em 0em 0em #ffffff, 5em 4em 0em 0em #ffffff, 5em 5em 0em 0em #ffffff, 5em 6em 0em 0em #ffffff, 5em 7em 0em 0em #ffffff, 5em 8em 0em 0em #ffffff, 5em 9em 0em 0em #c0e3bb, 6em 0em 0em 0em #73c166, 6em 1em 0em 0em #75c268, 6em 2em 0em 0em #fdfefd, 6em 3em 0em 0em #ffffff, 6em 4em 0em 0em #ffffff, 6em 5em 0em 0em #ffffff, 6em 6em 0em 0em #ffffff, 6em 7em 0em 0em #ffffff, 6em 8em 0em 0em #ffffff, 6em 9em 0em 0em #fdfefd, 7em 0em 0em 0em #73c166, 7em 1em 0em 0em #77c36b, 7em 2em 0em 0em #ffffff, 7em 3em 0em 0em #ffffff, 7em 4em 0em 0em #ffffff, 7em 5em 0em 0em #ffffff, 7em 6em 0em 0em #ffffff, 7em 7em 0em 0em #ffffff, 7em 8em 0em 0em #ffffff, 7em 9em 0em 0em #ffffff, 8em 0em 0em 0em #73c166, 8em 1em 0em 0em #9ed495, 8em 2em 0em 0em #ffffff, 8em 3em 0em 0em #ffffff, 8em 4em 0em 0em #ffffff, 8em 5em 0em 0em #ffffff, 8em 6em 0em 0em #ffffff, 8em 7em 0em 0em #ffffff, 8em 8em 0em 0em #ffffff, 8em 9em 0em 0em #e5f3e2, 9em 0em 0em 0em #81c775, 9em 1em 0em 0em #f7fcf7, 9em 2em 0em 0em #ffffff, 9em 3em 0em 0em #ffffff, 9em 4em 0em 0em #ffffff, 9em 5em 0em 0em #ffffff, 9em 6em 0em 0em #ffffff, 9em 7em 0em 0em #ffffff, 9em 8em 0em 0em #fbfdfb, 9em 9em 0em 0em #8ecd83, 10em 0em 0em 0em #b7dfb0, 10em 1em 0em 0em #ffffff, 10em 2em 0em 0em #ffffff, 10em 3em 0em 0em #ffffff, 10em 4em 0em 0em #ffffff, 10em 5em 0em 0em #ffffff, 10em 6em 0em 0em #ffffff, 10em 7em 0em 0em #ffffff, 10em 8em 0em 0em #b2ddab, 10em 9em 0em 0em #73c166, 11em 0em 0em 0em #cbe8c6, 11em 1em 0em 0em #ffffff, 11em 2em 0em 0em #ffffff, 11em 3em 0em 0em #ffffff, 11em 4em 0em 0em #ffffff, 11em 5em 0em 0em #ffffff, 11em 6em 0em 0em #ffffff, 11em 7em 0em 0em #cee9ca, 11em 8em 0em 0em #74c167, 11em 9em 0em 0em #73c166, 12em 0em 0em 0em #b4dead, 12em 1em 0em 0em #ffffff, 12em 2em 0em 0em #ffffff, 12em 3em 0em 0em #ffffff, 12em 4em 0em 0em #ffffff, 12em 5em 0em 0em #ffffff, 12em 6em 0em 0em #d1ebcd, 12em 7em 0em 0em #76c26a, 12em 8em 0em 0em #73c166, 12em 9em 0em 0em #73c166, 13em 0em 0em 0em #7ac46d, 13em 1em 0em 0em #e6f4e3, 13em 2em 0em 0em #ffffff, 13em 3em 0em 0em #ffffff, 13em 4em 0em 0em #fafdf9, 13em 5em 0em 0em #b4dead, 13em 6em 0em 0em #75c268, 13em 7em 0em 0em #73c166, 13em 8em 0em 0em #73c166, 13em 9em 0em 0em #73c166, 14em 0em 0em 0em #73c166, 14em 1em 0em 0em #76c26a, 14em 2em 0em 0em #98d18e, 14em 3em 0em 0em #9cd392, 14em 4em 0em 0em #7cc570, 14em 5em 0em 0em #73c166, 14em 6em 0em 0em #73c166, 14em 7em 0em 0em #73c166, 14em 8em 0em 0em #73c166, 14em 9em 0em 0em #73c166;
+}
+.icons div.hash {
+  background: #00A4E3;
+  /* font-size: 2px;*/
+}
+.icons div.hash i {
+  display: block;
+  width: 1em;
+  height: 1em;
+  background: #00A4E3;
+  position: absolute;
+  left: 8em;
+  top: 4em;
+  box-shadow: 0em 2em 0em 0em #D8F1FB, 0em 3em 0em 0em #D8F1FB, 0em 6em 0em 0em #D8F1FB, 0em 7em 0em 0em #D8F1FB, 2em 0em 0em 0em #D8F1FB, 2em 1em 0em 0em #D8F1FB, 2em 4em 0em 0em #D8F1FB, 2em 5em 0em 0em #D8F1FB, 2em 8em 0em 0em #D8F1FB, 2em 9em 0em 0em #D8F1FB,
+    6em 0em 0em 0em #D8F1FB, 6em 1em 0em 0em #D8F1FB, 6em 4em 0em 0em #D8F1FB, 6em 5em 0em 0em #D8F1FB, 6em 8em 0em 0em #D8F1FB, 6em 9em 0em 0em #D8F1FB,
+    
+    4em 0em 0em 0em #34BCEB, 4em 1em 0em 0em #34BCEB, 4em 4em 0em 0em #34BCEB, 4em 5em 0em 0em #34BCEB, 4em 8em 0em 0em #34BCEB, 4em 9em 0em 0em #34BCEB,
+    8em 0em 0em 0em #34BCEB, 8em 1em 0em 0em #34BCEB, 8em 4em 0em 0em #34BCEB, 8em 5em 0em 0em #34BCEB, 8em 8em 0em 0em #34BCEB, 8em 9em 0em 0em #34BCEB,
+    10em 2em 0em 0em #34BCEB, 10em 3em 0em 0em #34BCEB, 10em 6em 0em 0em #34BCEB, 10em 7em 0em 0em #34BCEB, 
+    
+    1em 2em 0em 0em #FFFFFF, 1em 3em 0em 0em #FFFFFF, 1em 6em 0em 0em #FFFFFF, 1em 7em 0em 0em #FFFFFF, 2em 2em 0em 0em #FFFFFF, 2em 3em 0em 0em #FFFFFF, 2em 6em 0em 0em #FFFFFF, 2em 7em 0em 0em #FFFFFF, 3em 0em 0em 0em #FFFFFF, 3em 1em 0em 0em #FFFFFF, 3em 2em 0em 0em #FFFFFF, 3em 3em 0em 0em #FFFFFF, 3em 4em 0em 0em #FFFFFF, 3em 5em 0em 0em #FFFFFF, 3em 6em 0em 0em #FFFFFF, 3em 7em 0em 0em #FFFFFF, 3em 8em 0em 0em #FFFFFF, 3em 9em 0em 0em #FFFFFF, 7em 0em 0em 0em #FFFFFF, 7em 1em 0em 0em #FFFFFF, 7em 2em 0em 0em #FFFFFF, 7em 3em 0em 0em #FFFFFF, 7em 4em 0em 0em #FFFFFF, 7em 5em 0em 0em #FFFFFF, 7em 6em 0em 0em #FFFFFF, 7em 7em 0em 0em #FFFFFF, 7em 8em 0em 0em #FFFFFF, 7em 9em 0em 0em #FFFFFF,
+    4em 2em 0em 0em #FFFFFF, 4em 3em 0em 0em #FFFFFF, 5em 2em 0em 0em #FFFFFF, 5em 3em 0em 0em #FFFFFF, 6em 2em 0em 0em #FFFFFF, 6em 3em 0em 0em #FFFFFF, 8em 2em 0em 0em #FFFFFF, 8em 3em 0em 0em #FFFFFF, 9em 2em 0em 0em #FFFFFF, 9em 3em 0em 0em #FFFFFF,
+    4em 6em 0em 0em #FFFFFF, 4em 7em 0em 0em #FFFFFF, 5em 6em 0em 0em #FFFFFF, 5em 7em 0em 0em #FFFFFF, 6em 6em 0em 0em #FFFFFF, 6em 7em 0em 0em #FFFFFF, 8em 6em 0em 0em #FFFFFF, 8em 7em 0em 0em #FFFFFF, 9em 6em 0em 0em #FFFFFF, 9em 7em 0em 0em #FFFFFF;
+}
+.icons div:before {
+  top: 14%;
+  position: relative;
+  font-size: 1.6em;
+}
+/** end icons first line **/
+/** icons second line **/
+.icons-sub {
+  height: 10.34%;
+  position: relative;
+}
+.icons-sub div:before,
+.icons-sub div:after {
+  content: "";
+  background-position: 0%;
+  position: absolute;
+}
+.icons-sub div.stats:before {
+  background: linear-gradient(to left bottom, #ed1555 50%, transparent 50%);
+  left: 60%;
+  top: 0px;
+}
+.icons-sub div.core:before {
+  background: linear-gradient(to right bottom, #73c166 50%, transparent 50%);
+  left: 52%;
+  top: -20%;
+}
+.icons-sub div.core:after {
+  background: linear-gradient(to left bottom, #73c166 50%, transparent 50%);
+  left: 26%;
+  top: -20%;
+}
+.icons-sub div.hash:before {
+  background: linear-gradient(to right bottom, #00a4e3 50%, transparent 50%);
+  left: 10%;
+  top: 0px;
+}
+.icons-sub div.stats:before,
+.icons-sub div.core:before,
+.icons-sub div.core:after,
+.icons-sub div.hash:before {
+  width: 26%;
+  height: 101%;
+}
+/** icons second line **/
+/*
+(8*100)/18
+
+
+
+60 > 100
+14
+
+58 > 100
+14
+ */

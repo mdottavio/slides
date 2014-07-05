@@ -1,15 +1,18 @@
 /* apply a natural box layout model to all elements */
-/* #olapic-logo *, #olapic-logo *:before, #olapic-logo *:after {
+body{
+    background: yellowgreen;
+    padding: 100px
+}
+ #olapic-logo *, #olapic-logo *:before, #olapic-logo *:after {
     -moz-box-sizing: border-box; 
     -webkit-box-sizing: border-box; box-sizing: border-box;
-} */
+} 
 #olapic-logo div { overflow: hidden; }
 #olapic-logo{
     height: 160px;
     width: 160px;
 }
-.icons{ height: 23.3%; position: relative;}
-.icons-sub{ height: 10.34%; position: relative;}
+/** end camara **/
 .camara-head{ height: 10.34%; overflow: hidden; position: relative;}
 .camara-top{ height: 5%; background: #FFFFFF; }
 .camara-body{ height: 48%; background: #FFFFFF;}
@@ -84,7 +87,10 @@
     border-bottom-right-radius: 10px;
     border-bottom-left-radius: 10px;
 }
+/** end camara **/
 
+/** icons first line **/
+.icons{ height: 23.3%; position: relative;}
 .icons div{
     background: red;
     -webkit-border-radius: 4px;
@@ -134,20 +140,11 @@
     display:block;
     width: 1em;
     height: 1em;
-    background: #00A4E3;
+    background: rgba(115,193,102,1);
     position:absolute;
-    left: 8em;
-    top: 4em;
-    box-shadow: 0em 2em 0em 0em #D8F1FB, 0em 3em 0em 0em #D8F1FB, 0em 6em 0em 0em #D8F1FB, 0em 7em 0em 0em #D8F1FB, 2em 0em 0em 0em #D8F1FB, 2em 1em 0em 0em #D8F1FB, 2em 4em 0em 0em #D8F1FB, 2em 5em 0em 0em #D8F1FB, 2em 8em 0em 0em #D8F1FB, 2em 9em 0em 0em #D8F1FB,
-    6em 0em 0em 0em #D8F1FB, 6em 1em 0em 0em #D8F1FB, 6em 4em 0em 0em #D8F1FB, 6em 5em 0em 0em #D8F1FB, 6em 8em 0em 0em #D8F1FB, 6em 9em 0em 0em #D8F1FB,
-    
-    4em 0em 0em 0em #34BCEB, 4em 1em 0em 0em #34BCEB, 4em 4em 0em 0em #34BCEB, 4em 5em 0em 0em #34BCEB, 4em 8em 0em 0em #34BCEB, 4em 9em 0em 0em #34BCEB,
-    8em 0em 0em 0em #34BCEB, 8em 1em 0em 0em #34BCEB, 8em 4em 0em 0em #34BCEB, 8em 5em 0em 0em #34BCEB, 8em 8em 0em 0em #34BCEB, 8em 9em 0em 0em #34BCEB,
-    10em 2em 0em 0em #34BCEB, 10em 3em 0em 0em #34BCEB, 10em 6em 0em 0em #34BCEB, 10em 7em 0em 0em #34BCEB, 
-    
-    1em 2em 0em 0em #FFFFFF, 1em 3em 0em 0em #FFFFFF, 1em 6em 0em 0em #FFFFFF, 1em 7em 0em 0em #FFFFFF, 2em 2em 0em 0em #FFFFFF, 2em 3em 0em 0em #FFFFFF, 2em 6em 0em 0em #FFFFFF, 2em 7em 0em 0em #FFFFFF, 3em 0em 0em 0em #FFFFFF, 3em 1em 0em 0em #FFFFFF, 3em 2em 0em 0em #FFFFFF, 3em 3em 0em 0em #FFFFFF, 3em 4em 0em 0em #FFFFFF, 3em 5em 0em 0em #FFFFFF, 3em 6em 0em 0em #FFFFFF, 3em 7em 0em 0em #FFFFFF, 3em 8em 0em 0em #FFFFFF, 3em 9em 0em 0em #FFFFFF, 7em 0em 0em 0em #FFFFFF, 7em 1em 0em 0em #FFFFFF, 7em 2em 0em 0em #FFFFFF, 7em 3em 0em 0em #FFFFFF, 7em 4em 0em 0em #FFFFFF, 7em 5em 0em 0em #FFFFFF, 7em 6em 0em 0em #FFFFFF, 7em 7em 0em 0em #FFFFFF, 7em 8em 0em 0em #FFFFFF, 7em 9em 0em 0em #FFFFFF,
-    4em 2em 0em 0em #FFFFFF, 4em 3em 0em 0em #FFFFFF, 5em 2em 0em 0em #FFFFFF, 5em 3em 0em 0em #FFFFFF, 6em 2em 0em 0em #FFFFFF, 6em 3em 0em 0em #FFFFFF, 8em 2em 0em 0em #FFFFFF, 8em 3em 0em 0em #FFFFFF, 9em 2em 0em 0em #FFFFFF, 9em 3em 0em 0em #FFFFFF,
-    4em 6em 0em 0em #FFFFFF, 4em 7em 0em 0em #FFFFFF, 5em 6em 0em 0em #FFFFFF, 5em 7em 0em 0em #FFFFFF, 6em 6em 0em 0em #FFFFFF, 6em 7em 0em 0em #FFFFFF, 8em 6em 0em 0em #FFFFFF, 8em 7em 0em 0em #FFFFFF, 9em 6em 0em 0em #FFFFFF, 9em 7em 0em 0em #FFFFFF;
+    left: 6em;
+    top: 5em;
+    box-shadow: 0em 0em rgba(115,193,102,1),0em 1em rgba(150,208,140,1),0em 2em rgba(226,242,223,1),0em 3em rgba(232,245,230,1),0em 4em rgba(195,228,189,1),0em 5em rgba(130,200,118,1),0em 6em rgba(115,193,102,1),0em 7em rgba(115,193,102,1),0em 8em rgba(115,193,102,1),0em 9em rgba(115,193,102,1),1em 0em rgba(121,196,109,1),1em 1em rgba(246,251,245,1),1em 2em rgba(255,255,255,1),1em 3em rgba(255,255,255,1),1em 4em rgba(255,255,255,1),1em 5em rgba(245,251,244,1),1em 6em rgba(153,210,144,1),1em 7em rgba(115,193,102,1),1em 8em rgba(115,193,102,1),1em 9em rgba(115,193,102,1),2em 0em rgba(148,208,139,1),2em 1em rgba(255,255,255,1),2em 2em rgba(255,255,255,1),2em 3em rgba(255,255,255,1),2em 4em rgba(255,255,255,1),2em 5em rgba(255,255,255,1),2em 6em rgba(252,254,251,1),2em 7em rgba(156,211,146,1),2em 8em rgba(115,193,102,1),2em 9em rgba(115,193,102,1),3em 0em rgba(142,205,132,1),3em 1em rgba(255,255,255,1),3em 2em rgba(255,255,255,1),3em 3em rgba(255,255,255,1),3em 4em rgba(255,255,255,1),3em 5em rgba(255,255,255,1),3em 6em rgba(255,255,255,1),3em 7em rgba(248,252,248,1),3em 8em rgba(139,203,128,1),3em 9em rgba(115,193,102,1),4em 0em rgba(117,194,104,1),4em 1em rgba(244,250,243,1),4em 2em rgba(255,255,255,1),4em 3em rgba(255,255,255,1),4em 4em rgba(255,255,255,1),4em 5em rgba(255,255,255,1),4em 6em rgba(255,255,255,1),4em 7em rgba(255,255,255,1),4em 8em rgba(230,244,228,1),4em 9em rgba(119,195,107,1),5em 0em rgba(115,193,102,1),5em 1em rgba(181,222,175,1),5em 2em rgba(255,255,255,1),5em 3em rgba(255,255,255,1),5em 4em rgba(255,255,255,1),5em 5em rgba(255,255,255,1),5em 6em rgba(255,255,255,1),5em 7em rgba(255,255,255,1),5em 8em rgba(255,255,255,1),5em 9em rgba(192,227,187,1),6em 0em rgba(115,193,102,1),6em 1em rgba(117,194,104,1),6em 2em rgba(253,254,253,1),6em 3em rgba(255,255,255,1),6em 4em rgba(255,255,255,1),6em 5em rgba(255,255,255,1),6em 6em rgba(255,255,255,1),6em 7em rgba(255,255,255,1),6em 8em rgba(255,255,255,1),6em 9em rgba(253,254,253,1),7em 0em rgba(115,193,102,1),7em 1em rgba(119,195,107,1),7em 2em rgba(255,255,255,1),7em 3em rgba(255,255,255,1),7em 4em rgba(255,255,255,1),7em 5em rgba(255,255,255,1),7em 6em rgba(255,255,255,1),7em 7em rgba(255,255,255,1),7em 8em rgba(255,255,255,1),7em 9em rgba(255,255,255,1),8em 0em rgba(115,193,102,1),8em 1em rgba(158,212,149,1),8em 2em rgba(255,255,255,1),8em 3em rgba(255,255,255,1),8em 4em rgba(255,255,255,1),8em 5em rgba(255,255,255,1),8em 6em rgba(255,255,255,1),8em 7em rgba(255,255,255,1),8em 8em rgba(255,255,255,1),8em 9em rgba(229,243,226,1),9em 0em rgba(129,199,117,1),9em 1em rgba(247,252,247,1),9em 2em rgba(255,255,255,1),9em 3em rgba(255,255,255,1),9em 4em rgba(255,255,255,1),9em 5em rgba(255,255,255,1),9em 6em rgba(255,255,255,1),9em 7em rgba(255,255,255,1),9em 8em rgba(251,253,251,1),9em 9em rgba(142,205,131,1),10em 0em rgba(183,223,176,1),10em 1em rgba(255,255,255,1),10em 2em rgba(255,255,255,1),10em 3em rgba(255,255,255,1),10em 4em rgba(255,255,255,1),10em 5em rgba(255,255,255,1),10em 6em rgba(255,255,255,1),10em 7em rgba(255,255,255,1),10em 8em rgba(178,221,171,1),10em 9em rgba(115,193,102,1),11em 0em rgba(203,232,198,1),11em 1em rgba(255,255,255,1),11em 2em rgba(255,255,255,1),11em 3em rgba(255,255,255,1),11em 4em rgba(255,255,255,1),11em 5em rgba(255,255,255,1),11em 6em rgba(255,255,255,1),11em 7em rgba(206,233,202,1),11em 8em rgba(116,193,103,1),11em 9em rgba(115,193,102,1),12em 0em rgba(180,222,173,1),12em 1em rgba(255,255,255,1),12em 2em rgba(255,255,255,1),12em 3em rgba(255,255,255,1),12em 4em rgba(255,255,255,1),12em 5em rgba(255,255,255,1),12em 6em rgba(209,235,205,1),12em 7em rgba(118,194,106,1),12em 8em rgba(115,193,102,1),12em 9em rgba(115,193,102,1),13em 0em rgba(122,196,109,1),13em 1em rgba(230,244,227,1),13em 2em rgba(255,255,255,1),13em 3em rgba(255,255,255,1),13em 4em rgba(250,253,249,1),13em 5em rgba(180,222,173,1),13em 6em rgba(117,194,104,1),13em 7em rgba(115,193,102,1),13em 8em rgba(115,193,102,1),13em 9em rgba(115,193,102,1),14em 0em rgba(115,193,102,1),14em 1em rgba(118,194,106,1),14em 2em rgba(152,209,142,1),14em 3em rgba(156,211,146,1),14em 4em rgba(124,197,112,1),14em 5em rgba(115,193,102,1),14em 6em rgba(115,193,102,1),14em 7em rgba(115,193,102,1),14em 8em rgba(115,193,102,1),14em 9em rgba(115,193,102,1);
 }
 .icons div.hash { background: #00A4E3; font-size: 2px;}
 .icons div.hash i {
@@ -174,6 +171,11 @@
     position: relative; 
     font-size: 1.6em;
 }
+
+/** end icons first line **/
+
+/** icons second line **/
+.icons-sub{ height: 10.34%; position: relative;}
 .icons-sub div:before,
 .icons-sub div:after{
     content: "";
@@ -207,6 +209,8 @@
     width: 26%;
     height: 101%;
 }
+/** icons second line **/
+
 /*
 (8*100)/18
 
@@ -218,8 +222,3 @@
 58 > 100
 14
  */
-
-body{
-    background: yellowgreen;
-    padding: 100px
-}
