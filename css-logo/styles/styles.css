@@ -20,9 +20,9 @@ body {
   overflow: hidden;
 }
 #olapic-logo {
-  height: 120;
-  width: 120;
-  font-size: 1.2;
+  height: 160;
+  width: 160;
+  font-size: 1.6;
 }
 /** end camara **/
 .camara-head {
