@@ -1,0 +1,16 @@
+{
+  "name": "naty&charly",
+  "version": "0.0.0",
+  "authors": [
+    "dottavio <dottavio@gmail.com>"
+  ],
+  "description": "just a simple site",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

@@ -1,0 +1,236 @@
+/* CSS for common people */
+body.normal {
+	background: #FFF;
+	position: relative;
+	width: 100%;
+	color: #6E6E86;
+	margin: auto 0;
+	padding-top: 0;
+	font-size: 16px;
+	font-weight: 500;
+	line-height: 120%;
+	overflow-x: hidden;
+	-webkit-font-smoothing: antialiased;
+	/* padding: 15em; */
+}
+body.normal .terminal,
+body.normal .game{
+  display: none;
+}
+.normal a, .normal a:hover, .normal a:focus {
+  color: #FFF;
+  text-decoration: none;
+  outline: none;
+}
+
+.normal .hero {
+  background-image: url('https://fbcdn-sphotos-e-a.akamaihd.net/hphotos-ak-xpa1/t31.0-8/10847638_10153096623754448_9037173703604125633_o.jpg');
+  background-size:cover;
+  box-shadow:inset 0px 0px 0 2000px rgba(0, 0, 0, 0.15);
+  height:100%;
+  color: rgba(255, 255, 255,1) !important;
+  overflow: hidden;
+}
+
+.normal .intro-text {
+  padding-top: 20%;
+  text-align:center;
+}
+.normal .intro-text h1, .normal .intro-text h4{
+  color:rgba(255, 255, 255, 1) !important;
+  
+}
+.normal .push{
+	padding-top: 6em;
+  
+	font-size: 1em;
+  
+	line-height: 1.2em;
+	font-family: 'Raleway', 'Helvetica', sans-serif;
+	color: rgba(34, 34, 34, .7);
+}
+
+.normal .intro-text p {
+  font-family:'Shadows Into Light', cursive;
+  font-size:44px;
+}
+
+.normal hr {
+  border:0;
+  height:1px;
+  background-image:-webkit-linear-gradient(left, rgba(0, 0, 0, 0), rgba(255, 255, 255, 0.75), rgba(0, 0, 0, 0));
+  background-image:-moz-linear-gradient(left, rgba(0, 0, 0, 0), rgba(255, 255, 255, 0.75), rgba(0, 0, 0, 0));
+  background-image:-ms-linear-gradient(left, rgba(0, 0, 0, 0), rgba(255, 255, 255, 0.75), rgba(0, 0, 0, 0));
+  background-image:-o-linear-gradient(left, rgba(0, 0, 0, 0), rgba(255, 255, 255, 0.75), rgba(0, 0, 0, 0));
+  opacity:0.8;
+}
+
+.normal h4, .normal .push h6 {
+	font-size: 1.2em;
+	font-family: 'Raleway', 'Helvetica', sans-serif;
+	font-weight: normal;
+	line-height: 100%;
+	/* text-align: center; */
+	padding: 0;
+	-webkit-font-smoothing: antialiased;
+}
+.normal .header-button {
+  width: 300px;
+  padding: 0.6em;
+  border: 2px solid #FFF;
+  text-align: center;
+  margin: 2em auto;
+  font-size: 1.2em;
+  color: #FFF;
+}
+.normal .video-container{
+	left: 0;
+	position: absolute;
+	top: 0px;
+	height: 100%;
+	overflow: hidden;
+	text-align: center;
+	width: 100%;
+}
+.normal .video-hero {
+	/* bottom: 0; */ 
+	left: 0; position: absolute; 
+	width: 100% !important;
+	height: auto;
+}
+.normal #map {
+  height: 350px;
+  margin-top: 1.9em;
+}
+#map img
+{
+    max-width : none;
+}
+.normal footer{ 
+	background-color: #6E6E86;
+	text-align: center;
+	color: rgb(255, 255, 255);
+}
+.normal footer p{
+	margin: 0px;
+	padding: 1em;
+}
+.normal footer span{
+  position: absolute;
+  cursor: pointer;
+}
+#letsPlay{
+  left: .6em;
+}
+#toTheDarkSide{
+  right: .6em;
+}
+@-webkit-keyframes spaceboots {
+  0% { -webkit-transform: translate(2px, 1px) rotate(0deg); }
+  10% { -webkit-transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { -webkit-transform: translate(-3px, 0px) rotate(1deg); }
+  30% { -webkit-transform: translate(0px, 2px) rotate(0deg); }
+  40% { -webkit-transform: translate(1px, -1px) rotate(1deg); }
+  50% { -webkit-transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { -webkit-transform: translate(-3px, 1px) rotate(0deg); }
+  70% { -webkit-transform: translate(2px, 1px) rotate(-1deg); }
+  80% { -webkit-transform: translate(-1px, -1px) rotate(1deg); }
+  90% { -webkit-transform: translate(2px, 2px) rotate(0deg); }
+  100% { -webkit-transform: translate(1px, -2px) rotate(-1deg); }
+}
+#letsPlay:hover,
+#letsPlay:focus {
+  -webkit-animation-name: spaceboots;
+  -webkit-animation-duration: 0.8s;
+  -webkit-transform-origin:50% 50%;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+}
+/* Ipad landscape  */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : landscape) {
+  .normal .intro-text {
+    padding-top:15%;
+  }
+  .normal .video-hero{
+    width: 190% !important;
+  }
+}
+/* iPhone 6 in landscape */
+@media only screen 
+and (min-device-width : 375px) 
+and (max-device-width : 667px) 
+and (orientation : landscape) {
+  .normal .intro-text {
+    padding-top:15%;
+  }
+  .normal .video-hero{
+    width: 190% !important;
+  }
+}
+/* iPhone 6 Plus in landscape */
+@media only screen 
+and (min-device-width : 540px) 
+and (max-device-width : 960px) 
+and (orientation : landscape) {
+  .normal .intro-text {
+    padding-top:15%;
+  }
+  .normal .video-hero{
+    width: 190% !important;
+  }
+}
+/* CSS for developers */
+body.developers .hero, body.developers .push, body.developers .game{ display: none; }
+body.developers .terminal{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: rgb(0,0,0);
+  display: block;
+}
+/* CSS for games */
+body.games .hero, body.games .push, body.games .terminal{ display: none; }
+body.games .game{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: #FAD700;
+  display: block;
+  background-image: url('../img/super-mario.jpg');
+  background-position: 50% 50%;
+  background-repeat: repeat-y;
+  background-size: cover;
+}
+
+
+
+
+/* game */
+#nes, .game .controls{
+	width: 50%;
+	margin: 1% auto 0px auto;
+}
+.nes-screen{
+	position: relative;
+	left: 50%;
+	/* margin: 20px auto; */
+	margin-left: -128px;
+}
+.big-screen{
+	margin-left: -256px;
+}
+.nes-roms, .nes-controls{
+	/* position: absolute; */
+	/* max-width: 256px; */ 
+	/* left: 50%; */
+	/* top: 340px; */
+	text-align: center;
+	/* margin-left: -128px; */
+}
+.nes-status{
+	display: none;
+}
+
