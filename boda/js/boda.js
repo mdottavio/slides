@@ -55,7 +55,7 @@ var terminal = new Terminal('terminal', {'welcome':'use ? to list the commands'}
 var nes;
 $(function() {
     nes = new JSNES({
-        'swfPath': '/swf/',
+        'swfPath': 'swf/',
         'ui': $('#nes').JSNESUI({
             "Working": [
                 ['Bubble Bobble', 'roms/bobble.nes'],
