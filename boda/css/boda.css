@@ -1,16 +1,16 @@
 /* CSS for common people */
 body.normal {
-	background: #FFF;
-	position: relative;
-	width: 100%;
-	color: #6E6E86;
-	margin: auto 0;
-	padding-top: 0;
-	font-size: 16px;
-	font-weight: 500;
-	line-height: 120%;
-	overflow-x: hidden;
-	-webkit-font-smoothing: antialiased;
+	/* background: #FFF; */
+	/* position: relative; */
+	/* width: 100%; */
+	/* color: #6E6E86; */
+	/* margin: auto 0; */
+	/* padding-top: 0; */
+	/* font-size: 16px; */
+	/* font-weight: 500; */
+	/* line-height: 120%; */
+	/* overflow-x: hidden; */
+	/* -webkit-font-smoothing: antialiased; */
 	/* padding: 15em; */
 }
 body.normal .terminal,
@@ -24,12 +24,14 @@ body.normal .game{
 }
 
 .normal .hero {
-  background-image: url('https://fbcdn-sphotos-e-a.akamaihd.net/hphotos-ak-xpa1/t31.0-8/10847638_10153096623754448_9037173703604125633_o.jpg');
+/*   background-image: url('https://fbcdn-sphotos-e-a.akamaihd.net/hphotos-ak-xpa1/t31.0-8/10847638_10153096623754448_9037173703604125633_o.jpg'); */
   background-size:cover;
   box-shadow:inset 0px 0px 0 2000px rgba(0, 0, 0, 0.15);
   height:100%;
   color: rgba(255, 255, 255,1) !important;
   overflow: hidden;
+padding: .8em;
+position: relative;
 }
 
 .normal .intro-text {
@@ -41,13 +43,13 @@ body.normal .game{
   
 }
 .normal .push{
-	padding-top: 6em;
+	/* padding-top: 6em; */
   
-	font-size: 1em;
+	/* font-size: 1em; */
   
-	line-height: 1.2em;
-	font-family: 'Raleway', 'Helvetica', sans-serif;
-	color: rgba(34, 34, 34, .7);
+	/* line-height: 1.2em; */
+	/* font-family: 'Raleway', 'Helvetica', sans-serif; */
+	/* color: rgba(34, 34, 34, .7); */
 }
 
 .normal .intro-text p {
@@ -90,13 +92,16 @@ body.normal .game{
 	height: 100%;
 	overflow: hidden;
 	text-align: center;
-	width: 100%;
+	width: 100%; /* Safari/Chrome, other WebKit */       /* Firefox, other Gecko */            /* Opera/IE 8+ */;
+	border: .8em solid rgb(255, 255, 255);
+	-webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;
 }
 .normal .video-hero {
 	/* bottom: 0; */ 
 	left: 0; position: absolute; 
 	width: 100% !important;
 	height: auto;
+	display: none;
 }
 .normal #map {
   height: 350px;
