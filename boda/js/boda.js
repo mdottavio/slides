@@ -12,9 +12,9 @@ map.addMarker({
         content: '<p>Salon de eventos lalala</p>'
     }
 });
-document.getElementById("letsPlay").addEventListener("click", function() {
-    document.getElementsByTagName('body')[0].className = 'games';
-});
+// document.getElementById("letsPlay").addEventListener("click", function() {
+//     document.getElementsByTagName('body')[0].className = 'games';
+// });
 document.getElementById("toTheDarkSide").addEventListener("click", function() {
     document.getElementsByTagName('body')[0].className = 'developers';
 });
@@ -26,6 +26,7 @@ var terminal = new Terminal('terminal', {'welcome':'use ? to list the commands'}
                 return '';
 
             case '?':
+            case 'help':
                 return 'Commands: clear, ?, place, when, confirm [your name], quit, ver or version';
 
             case 'ver':
