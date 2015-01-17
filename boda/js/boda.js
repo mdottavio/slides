@@ -52,22 +52,76 @@ var terminal = new Terminal('terminal', {'welcome':'use ? to list the commands'}
         };
     }
 });
-var nes;
-$(function() {
-    nes = new JSNES({
-        'swfPath': 'swf/',
-        'ui': $('#nes').JSNESUI({
-            "Working": [
-                ['Bubble Bobble', 'roms/bobble.nes'],
-                ['Pac-Man', 'roms/pac.nes'],
-                ['Super Mario Bros.', 'roms/mario.nes'],
-            ]
-        })
+// var nes;
+// $(function() {
+//     nes = new JSNES({
+//         'swfPath': 'swf/',
+//         'ui': $('#nes').JSNESUI({
+//             "Working": [
+//                 ['Bubble Bobble', 'roms/bobble.nes'],
+//                 ['Pac-Man', 'roms/pac.nes'],
+//                 ['Super Mario Bros.', 'roms/mario.nes'],
+//             ]
+//         })
+//     });
+//     document.getElementById("nes-close").addEventListener("click", function() {
+//         self.nes.reloadRom();
+//         self.nes.start();
+//         document.getElementsByTagName('body')[0].className = 'normal';
+//     });
+// });
+// 
+
+// let's handle the form
+(function(){
+    var theForm = $('#theForm'),
+        name = $('#name'),
+        nameLabel = $('#nameLabel'), nameError = $('#nameError'),
+        moreThanOne = $('#moreThanOne_1'),
+        total = $('#total'),
+        send = $('#send'), 
+        formControl = function(){
+            nameLabel.removeClass('error');
+            nameError.css({'display':'none'});
+            if(($.trim(name.val())).length == 0){
+                nameLabel.addClass('error');
+                nameError.css({'display':'block'});
+                return false;
+            }
+            return true;
+        },
+        fillData = function(){
+            return {
+                'entry.1089820037': name.val(),
+                'entry.427128130': moreThanOne.attr('checked') ? 'Si' : 'No',
+                'entry.1246659734': moreThanOne.attr('checked') ? total.val() : 1
+            }
+        };
+
+    moreThanOne.click(function(){
+        if(moreThanOne.attr('checked')){
+            total.removeAttr('disabled');
+        } else {
+            total.attr('disabled','disabled');
+        }
     });
 
-    document.getElementById("nes-close").addEventListener("click", function() {
-        self.nes.reloadRom();
-        self.nes.start();
-        document.getElementsByTagName('body')[0].className = 'normal';
+    send.click(function(e){
+        e.preventDefault();
+        if(formControl()){
+            $.ajax({
+                type: "GET",
+                crossDomain: true,
+                url: 'https://docs.google.com/forms/d/1Xfc5pAkcImlKXtk2vlu-Ji1zEa48sy0ExZ6BqVFlHEs/formResponse',
+                data: fillData(),
+                dataType: 'xml',
+                complete : function(){
+                    theForm.addClass('sent');
+                }
+            });
+        }
     });
-});
+
+
+})();
+

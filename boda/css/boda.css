@@ -30,8 +30,8 @@ body.normal .game{
   height:100%;
   color: rgba(255, 255, 255,1) !important;
   overflow: hidden;
-padding: .8em;
-position: relative;
+  padding: .8em;
+  position: relative;
 }
 
 .normal .intro-text {
@@ -43,13 +43,14 @@ position: relative;
   
 }
 .normal .push{
-	/* padding-top: 6em; */
+	padding-top: 6em;
   
-	/* font-size: 1em; */
+	font-size: 1em;
   
-	/* line-height: 1.2em; */
-	/* font-family: 'Raleway', 'Helvetica', sans-serif; */
-	/* color: rgba(34, 34, 34, .7); */
+	line-height: 1.2em;
+	font-family: 'Raleway', 'Helvetica', sans-serif;
+	color: rgba(34, 34, 34, .7);
+	/* text-align: center; */
 }
 
 .normal .intro-text p {
@@ -68,7 +69,7 @@ position: relative;
 }
 
 .normal h4, .normal .push h6 {
-	font-size: 1.2em;
+	font-size: 1.8em;
 	font-family: 'Raleway', 'Helvetica', sans-serif;
 	font-weight: normal;
 	line-height: 100%;
@@ -76,6 +77,8 @@ position: relative;
 	padding: 0;
 	-webkit-font-smoothing: antialiased;
 }
+.normal h4 { font-size: 1.8em; }
+.normal .push h6 { font-size: 3em; }
 .normal .header-button {
   width: 300px;
   padding: 0.6em;
@@ -85,7 +88,8 @@ position: relative;
   font-size: 1.2em;
   color: #FFF;
 }
-.normal .video-container{
+.normal .video-container,
+.normal .bothsofthem{
 	left: 0;
 	position: absolute;
 	top: 0px;
@@ -96,19 +100,23 @@ position: relative;
 	border: .8em solid rgb(255, 255, 255);
 	-webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;
 }
-.normal .video-hero {
-	/* bottom: 0; */ 
-	left: 0; position: absolute; 
+.normal .hero .row{ z-index: 11111111; position: relative;}
+.normal video {
+	bottom: 0; 
+	left: 0; 
+	position: absolute; 
 	width: 100% !important;
 	height: auto;
-	display: none;
+	/* display: none; */
+	z-index: 11;
+	/* position: relative; */
 }
 .normal #map {
   height: 350px;
   margin-top: 1.9em;
+  text-align: center;
 }
-#map img
-{
+#map img{
     max-width : none;
 }
 .normal footer{ 
@@ -130,6 +138,10 @@ position: relative;
 #toTheDarkSide{
   right: .6em;
 }
+#nameError{ display: none; font-style: normal;}
+.normal .theFormResult {display: none; }
+.normal .sent .theForm { display: none; } 
+.normal .sent .theFormResult { display: block; }
 @-webkit-keyframes spaceboots {
   0% { -webkit-transform: translate(2px, 1px) rotate(0deg); }
   10% { -webkit-transform: translate(-1px, -2px) rotate(-1deg); }
@@ -238,4 +250,23 @@ body.games .game{
 .nes-status{
 	display: none;
 }
+.bothsofthem{
+/*   width: 100%;
+  overflow: hidden;
+  position: absolute;
+  height: 100%;
+  background: red;
+  top: 0px;
+  border: .8em solid rgb(255, 255, 255);
+  -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;
+ */
+   
 
+   /* display: none; */
+
+
+   z-index: 10;
+}
+.charly, .naty{ width: 15em; position: absolute; float: left; /* -webkit-filter: grayscale(100%); */ filter: grayscale(100%); /* background: red; */ bottom: 0px;}
+.naty{ right: 0px; }
+.vjs-control-bar{ display: none; }

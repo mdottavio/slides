@@ -6853,7 +6853,7 @@ if (typeof jQuery !== 'undefined') {
                  * Create UI
                  */
                 self.root = $('<div></div>');
-                self.screen = $('<canvas class="nes-screen" width="256" height="240"></canvas>').appendTo(self.root);
+                self.screen = $('<canvas class="nes-screen big-screen" width="512" height="240"></canvas>').appendTo(self.root);
                 
                 if (!self.screen[0].getContext) {
                     parent.html("Your browser doesn't support the <code>&lt;canvas&gt;</code> tag. Try Google Chrome, Safari, Opera or Firefox!");
@@ -6868,7 +6868,7 @@ if (typeof jQuery !== 'undefined') {
                     pause: $('<input type="button" value="pause" class="nes-pause button success round small" disabled="disabled">').appendTo(self.controls),
                     restart: $('<input type="button" value="restart" class="nes-restart button success round small" disabled="disabled">').appendTo(self.controls),
                     sound: $('<input type="button" value="enable sound" class="nes-enablesound button success round small">').appendTo(self.controls),
-                    zoom: $('<input type="button" value="zoom in" class="nes-zoom button success round small">').appendTo(self.controls),
+                    zoom: $('<input type="button" value="zoom in" class="nes-zoom button success round small">'), //.appendTo(self.controls),
                     close: $('<input type="button" value="close" id="nes-close" class="nes-close button success round small">').appendTo(self.controls)
                 };
                 self.status = $('<p class="nes-status">Booting up...</p>').appendTo(self.root);
