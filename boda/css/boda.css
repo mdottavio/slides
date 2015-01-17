@@ -105,7 +105,7 @@ body.normal .game{
 	bottom: 0; 
 	left: 0; 
 	position: absolute; 
-	width: 100% !important;
+	width: 190%;
 	height: auto;
 	/* display: none; */
 	z-index: 11;
@@ -175,16 +175,21 @@ and (orientation : landscape) {
     width: 190% !important;
   }
 }
+/* iPads (portrait and landscape) ----------- */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) {
+  .normal .video-hero{
+    width: 190% !important;
+  }
+}
 /* iPhone 6 in landscape */
 @media only screen 
 and (min-device-width : 375px) 
 and (max-device-width : 667px) 
 and (orientation : landscape) {
   .normal .intro-text {
-    padding-top:15%;
-  }
-  .normal .video-hero{
-    width: 190% !important;
+    padding-top:4%;
   }
 }
 /* iPhone 6 Plus in landscape */
@@ -193,12 +198,14 @@ and (min-device-width : 540px)
 and (max-device-width : 960px) 
 and (orientation : landscape) {
   .normal .intro-text {
-    padding-top:15%;
+    padding-top: 4%;
   }
   .normal .video-hero{
     width: 190% !important;
   }
 }
+
+
 /* CSS for developers */
 body.developers .hero, body.developers .push, body.developers .game{ display: none; }
 body.developers .terminal{
