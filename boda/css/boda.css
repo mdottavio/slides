@@ -110,10 +110,11 @@ body.normal .game{
 
 	/* Safari 4-5, Chrome 1-9 */
 	/* Can't specify a percentage size? Laaaaaame. */
-	background: -webkit-gradient(radial, center center, 0, center center, 460, from(#B0BECF), to(#E5EAF0));
+	/* background: -webkit-gradient(radial, center center, 0, center center, 460, from(#B0BECF), to(#E5EAF0)); */
 
 	/* Safari 5.1+, Chrome 10+ */
-	 background: -webkit-radial-gradient(circle, #B0BECF, #E5EAF0); 
+	 
+	/* background: -webkit-radial-gradient(circle, #B0BECF, #E5EAF0); */ 
 
 	/* Firefox 3.6+ */
 	background: -moz-radial-gradient(circle, #B0BECF, #E5EAF0);
@@ -122,6 +123,7 @@ body.normal .game{
 	background: -ms-radial-gradient(circle, #B0BECF, #E5EAF0);
 
 	/* Opera couldn't do radial gradients, then at some point they started supporting the -webkit- syntax, how it kinda does but it's kinda broken (doesn't do sizing) */
+	background: #FFF;
 }
 .normal .hero .row{ z-index: 11111111; position: relative;}
 .normal video {
