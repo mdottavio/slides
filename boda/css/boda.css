@@ -35,8 +35,15 @@ body.normal .game{
 }
 
 .normal .intro-text {
+  opacity: 1;
   padding-top: 20%;
   text-align:center;
+
+  -moz-transition: all 250ms 250ms cubic-bezier(0.770, 0.000, 0.175, 1.000); 
+  transition: all 250ms 250ms cubic-bezier(0.770, 0.000, 0.175, 1.000);
+}
+.normal .loading .intro-text{ 
+  opacity: 0;
 }
 .normal .intro-text h1, .normal .intro-text h4{
   color:rgba(255, 255, 255, 1) !important;
@@ -99,6 +106,22 @@ body.normal .game{
 	width: 100%; /* Safari/Chrome, other WebKit */       /* Firefox, other Gecko */            /* Opera/IE 8+ */;
 	border: .8em solid rgb(255, 255, 255);
 	-webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;
+	/* fallback */
+
+	/* Safari 4-5, Chrome 1-9 */
+	/* Can't specify a percentage size? Laaaaaame. */
+	background: -webkit-gradient(radial, center center, 0, center center, 460, from(#B0BECF), to(#E5EAF0));
+
+	/* Safari 5.1+, Chrome 10+ */
+	 background: -webkit-radial-gradient(circle, #B0BECF, #E5EAF0); 
+
+	/* Firefox 3.6+ */
+	background: -moz-radial-gradient(circle, #B0BECF, #E5EAF0);
+
+	/* IE 10 */
+	background: -ms-radial-gradient(circle, #B0BECF, #E5EAF0);
+
+	/* Opera couldn't do radial gradients, then at some point they started supporting the -webkit- syntax, how it kinda does but it's kinda broken (doesn't do sizing) */
 }
 .normal .hero .row{ z-index: 11111111; position: relative;}
 .normal video {
@@ -274,6 +297,84 @@ body.games .game{
 
    z-index: 10;
 }
-.charly, .naty{ width: 15em; position: absolute; float: left; /* -webkit-filter: grayscale(100%); */ filter: grayscale(100%); /* background: red; */ bottom: 0px;}
-.naty{ right: 0px; }
+.charly, .naty{ 
+  opacity: 0;
+  width: 15em; 
+  position: absolute;
+  float: left; 
+  background: white; 
+  top: 50%; 
+  margin-top: -4em; 
+  height: 8em; 
+  overflow: hidden; 
+  padding: .9em; 
+  -moz-transition: all 250ms cubic-bezier(0.770, 0.000, 0.175, 1.000); 
+  transition: all 250ms cubic-bezier(0.770, 0.000, 0.175, 1.000);
+}
+.naty{ right: 50%; margin-right: -15.4em; }
+.charly { left: 50%; margin-left: -15.4em; }
+.showed .charly,
+.showed .naty{ opacity: 1; }
+
 .vjs-control-bar{ display: none; }
+.pluss-container {
+  position: relative;
+  margin: -40px auto auto auto;
+  top: 54%;
+  width: 40px;
+  z-index: 100;
+  height: 40px;
+  /* background: red; */
+  padding: 4px;
+}
+.pluss {
+  posisiton: relative;
+  width: 33em;
+  height: 33em;
+  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjwhRE9DVFlQRSBzdmcgIFBVQkxJQyAnLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4nICAnaHR0cDovL3d3dy53My5vcmcvR3JhcGhpY3MvU1ZHLzEuMS9EVEQvc3ZnMTEuZHRkJz48c3ZnIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDUxMiA1MTIuMDIiIGhlaWdodD0iNTEyLjAycHgiIGlkPSJMYXllcl8xIiB2ZXJzaW9uPSIxLjEiIHZpZXdCb3g9IjAgMCA1MTIgNTEyLjAyIiB3aWR0aD0iNTEycHgiIHhtbDpzcGFjZT0icHJlc2VydmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPjxnIGlkPSJtZWFuaWNvbnNfeDVGXzI1Ij48cGF0aCBkPSJNMjU2LjI5OC0wLjAyQzExNC45ODktMC4wMiwwLjM0NSwxMTQuNTg0LDAuMzQ1LDI1NS45MzNjMCwxNDEuNDAzLDExNC42NDUsMjU2LjA2NSwyNTUuOTUzLDI1Ni4wNjUgICBjMTQxLjQ0LDAsMjU2LjA0Ny0xMTQuNjYyLDI1Ni4wNDctMjU2LjA2NUM1MTIuMzQ2LDExNC41ODYsMzk3LjczOC0wLjAyLDI1Ni4yOTgtMC4wMnogTTQyOS43NDQsMzA4LjM1NEgzMDguNzAxVjQyOS4zNEgyMDMuOTkgICBWMzA4LjM1NEg4Mi45NTdWMjAzLjYzM0gyMDMuOTlWODIuNTloMTA0LjcxMXYxMjEuMDQzaDEyMS4wNDNWMzA4LjM1NHoiLz48L2c+PGcgaWQ9IkxheWVyXzFfMV8iLz48L3N2Zz4=);
+  overflow: hidden;
+  font-size: 1px;
+  color: rgba(white, 0);
+  -webkit-animation: spin-step-simple 1s linear 0s infinite;
+  animation: spin-step-simple 1s linear 0s infinite;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: contain;
+  color: red;
+}
+
+@-webkit-keyframes spin-step-simple {
+  0% {-webkit-transform: rotate(0deg);}
+  10% {-webkit-transform: rotate(90deg);}
+  100% {-webkit-transform: rotate(90deg);}
+}
+@keyframes spin-step-simple {
+  0% {-webkit-transform: rotate(0deg);}
+  10% {-webkit-transform: rotate(90deg);}
+  100% {-webkit-transform: rotate(90deg);}
+}
+
+
+//Ignore the next lines: dumb sleepy me doing it the boring long way
+@-webkit-keyframes spin-step {
+  0% { -webkit-transform: rotate(0deg); }
+  22% { -webkit-transform: rotate(0deg); }
+  25% { -webkit-transform: rotate(90deg); }
+  47% { -webkit-transform: rotate(90deg); }
+  50% { -webkit-transform: rotate(180deg); }
+  72% { -webkit-transform: rotate(180deg); }
+  75% { -webkit-transform: rotate(270deg); }
+  97% { -webkit-transform: rotate(270deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+@keyframes spin-step {
+  0% { -webkit-transform: rotate(0deg); }
+  22% { -webkit-transform: rotate(0deg); }
+  25% { -webkit-transform: rotate(90deg); }
+  47% { -webkit-transform: rotate(90deg); }
+  50% { -webkit-transform: rotate(180deg); }
+  72% { -webkit-transform: rotate(180deg); }
+  75% { -webkit-transform: rotate(270deg); }
+  97% { -webkit-transform: rotate(270deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}

@@ -1,7 +1,7 @@
 var terminal, nes;
 
 $( document ).ready(function() {
-
+  $('.bothsofthem').addClass('showed');
   var videos = {
     'mp4' : {
       'url' : 'http://videos-c-11.ak.instagram.com/hphotos-ak-xaf1/t50.2886-16/10926514_325109034357011_995370757_n.mp4',
@@ -13,43 +13,45 @@ $( document ).ready(function() {
     }
   }
   //video preloader
-  $.html5Loader({
-    filesToLoad: {
-      files:[
-        {
-          "type": "VIDEO",
-          "sources": {
-            "webm": {
-              "source": videos.webm.url,
-              "size": videos.webm.size
-            },
-            "h264": {
-              "source": videos.mp4.url,
-              "size": videos.mp4.size
+  function loadVideos(){
+    $.html5Loader({
+      filesToLoad: {
+        files:[
+          {
+            "type": "VIDEO",
+            "sources": {
+              "webm": {
+                "source": videos.webm.url,
+                "size": videos.webm.size
+              },
+              "h264": {
+                "source": videos.mp4.url,
+                "size": videos.mp4.size
+              }
             }
           }
-        }
-      ]
-    },
-    onComplete: function () {
-      var video = $('<video id="video-hero" class="video-hero" data-aspect="1.78" preload="auto" loop="loop" autoplay></video>')
-            .append('<source src="'+videos.mp4.url+'" type="video/mp4" />')
-            .append('<source src="'+videos.webm.url+'" type="video/webm" />')
-            .appendTo($("#video-container"));
-      videojs("video-hero", {
-        "autoplay": true,
-        "loop": "true",
-        "preload": "auto",
-        "controls": false
-      }, function(){
-        console.log('a');
-        // Player (this) is initialized and ready.
-      });
-    }
-    // ,
-    // onUpdate: loaderAnimation.update
-  });
+        ]
+      },
+      onComplete: function () {
+        var video = $('<video id="video-hero" class="video-hero" data-aspect="1.78" preload="auto" loop="loop" autoplay></video>')
+              .append('<source src="'+videos.mp4.url+'" type="video/mp4" />')
+              .append('<source src="'+videos.webm.url+'" type="video/webm" />')
+              .appendTo($("#video-container"));
+        videojs("video-hero", {
+          "autoplay": true,
+          "loop": "true",
+          "preload": "auto",
+          "controls": false
+        }, function(){
+          setTimeout(function(){
+            $('#intro').removeClass('loading');
+          }, 800);
+        });
+      }
+    })
+  }
 
+  setTimeout(loadVideos, 1500);
 
   var map = new GMaps({
     div: '#map',
