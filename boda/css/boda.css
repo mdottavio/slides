@@ -14,7 +14,6 @@ body.normal {
 	/* padding: 15em; */
 }
 body.normal .terminal,
-body.normal .game{
   display: none;
 }
 .normal a, .normal a:hover, .normal a:focus {
@@ -36,7 +35,7 @@ body.normal .game{
 
 .normal .intro-text {
   opacity: 1;
-  padding-top: 20%;
+  padding-top: 24%;
   text-align:center;
 
   -moz-transition: all 250ms 250ms cubic-bezier(0.770, 0.000, 0.175, 1.000); 
@@ -49,6 +48,11 @@ body.normal .game{
   color:rgba(255, 255, 255, 1) !important;
   
 }
+.normal .intro-text p {
+  /* font-family:'Shadows Into Light', cursive; */
+  font-size: 1.8em;
+  line-height: 1.2em;
+}
 .normal .push{
 	padding-top: 6em;
   
@@ -59,11 +63,8 @@ body.normal .game{
 	color: rgba(34, 34, 34, .7);
 	/* text-align: center; */
 }
+.normal .last { padding-bottom: 6em; }
 
-.normal .intro-text p {
-  font-family:'Shadows Into Light', cursive;
-  font-size:44px;
-}
 
 .normal hr {
   border:0;
@@ -75,7 +76,7 @@ body.normal .game{
   opacity:0.8;
 }
 
-.normal h4, .normal .push h6 {
+.normal h4, .normal .push h6, .normal p {
 	font-size: 1.8em;
 	font-family: 'Raleway', 'Helvetica', sans-serif;
 	font-weight: normal;
@@ -84,8 +85,8 @@ body.normal .game{
 	padding: 0;
 	-webkit-font-smoothing: antialiased;
 }
-.normal h4 { font-size: 1.8em; }
-.normal .push h6 { font-size: 3em; }
+.normal h4, .normal p { line-height: 1.3em; font-size: 1.5em; }
+.normal .push h6 { font-size: 2.6em; margin-bottom: 0.8em;}
 .normal .header-button {
   width: 300px;
   padding: 0.6em;
@@ -144,144 +145,8 @@ body.normal .game{
 #map img{
     max-width : none;
 }
-.normal footer{ 
-	background-color: #6E6E86;
-	text-align: center;
-	color: rgb(255, 255, 255);
-}
-.normal footer p{
-	margin: 0px;
-	padding: 1em;
-}
-.normal footer span{
-  position: absolute;
-  cursor: pointer;
-}
-#letsPlay{
-  left: .6em;
-}
-#toTheDarkSide{
-  right: .6em;
-}
-#nameError{ display: none; font-style: normal;}
-.normal .theFormResult {display: none; }
-.normal .sent .theForm { display: none; } 
-.normal .sent .theFormResult { display: block; }
-@-webkit-keyframes spaceboots {
-  0% { -webkit-transform: translate(2px, 1px) rotate(0deg); }
-  10% { -webkit-transform: translate(-1px, -2px) rotate(-1deg); }
-  20% { -webkit-transform: translate(-3px, 0px) rotate(1deg); }
-  30% { -webkit-transform: translate(0px, 2px) rotate(0deg); }
-  40% { -webkit-transform: translate(1px, -1px) rotate(1deg); }
-  50% { -webkit-transform: translate(-1px, 2px) rotate(-1deg); }
-  60% { -webkit-transform: translate(-3px, 1px) rotate(0deg); }
-  70% { -webkit-transform: translate(2px, 1px) rotate(-1deg); }
-  80% { -webkit-transform: translate(-1px, -1px) rotate(1deg); }
-  90% { -webkit-transform: translate(2px, 2px) rotate(0deg); }
-  100% { -webkit-transform: translate(1px, -2px) rotate(-1deg); }
-}
-#letsPlay:hover,
-#letsPlay:focus {
-  -webkit-animation-name: spaceboots;
-  -webkit-animation-duration: 0.8s;
-  -webkit-transform-origin:50% 50%;
-  -webkit-animation-iteration-count: infinite;
-  -webkit-animation-timing-function: linear;
-}
-/* Ipad landscape  */
-@media only screen 
-and (min-device-width : 768px) 
-and (max-device-width : 1024px) 
-and (orientation : landscape) {
-  .normal .intro-text {
-    padding-top:15%;
-  }
-  .normal .video-hero{
-    width: 190% !important;
-  }
-}
-/* iPads (portrait and landscape) ----------- */
-@media only screen 
-and (min-device-width : 768px) 
-and (max-device-width : 1024px) {
-  .normal .video-hero{
-    width: 190% !important;
-  }
-}
-/* iPhone 6 in landscape */
-@media only screen 
-and (min-device-width : 375px) 
-and (max-device-width : 667px) 
-and (orientation : landscape) {
-  .normal .intro-text {
-    padding-top:4%;
-  }
-}
-/* iPhone 6 Plus in landscape */
-@media only screen 
-and (min-device-width : 540px) 
-and (max-device-width : 960px) 
-and (orientation : landscape) {
-  .normal .intro-text {
-    padding-top: 4%;
-  }
-  .normal .video-hero{
-    width: 190% !important;
-  }
-}
 
 
-/* CSS for developers */
-body.developers .hero, body.developers .push, body.developers .game{ display: none; }
-body.developers .terminal{
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  background: rgb(0,0,0);
-  display: block;
-}
-/* CSS for games */
-body.games .hero, body.games .push, body.games .terminal{ display: none; }
-body.games .game{
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  background: #FAD700;
-  display: block;
-  background-image: url('../img/super-mario.jpg');
-  background-position: 50% 50%;
-  background-repeat: repeat-y;
-  background-size: cover;
-}
-
-
-
-
-/* game */
-#nes, .game .controls{
-	width: 50%;
-	margin: 1% auto 0px auto;
-}
-.nes-screen{
-	position: relative;
-	left: 50%;
-	/* margin: 20px auto; */
-	margin-left: -128px;
-}
-.big-screen{
-	margin-left: -256px;
-}
-.nes-roms, .nes-controls{
-	/* position: absolute; */
-	/* max-width: 256px; */ 
-	/* left: 50%; */
-	/* top: 340px; */
-	text-align: center;
-	/* margin-left: -128px; */
-}
-.nes-status{
-	display: none;
-}
 .bothsofthem{
 /*   width: 100%;
   overflow: hidden;
@@ -319,6 +184,10 @@ body.games .game{
 .showed .naty{ opacity: 1; }
 
 .vjs-control-bar{ display: none; }
+
+/**
+ * Pluss icon
+ */
 .pluss-container {
   position: relative;
   margin: -40px auto auto auto;
@@ -379,4 +248,73 @@ body.games .game{
   75% { -webkit-transform: rotate(270deg); }
   97% { -webkit-transform: rotate(270deg); }
   100% { -webkit-transform: rotate(360deg); }
+}
+
+
+
+
+
+
+/* Ipad landscape  */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : landscape) {
+  .normal .intro-text {
+    padding-top:15%;
+  }
+  .normal .video-hero{
+    width: 190% !important;
+  }
+}
+/* iPads (portrait and landscape) ----------- */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) {
+  .normal .video-hero{
+    width: 190% !important;
+  }
+}
+/* iPhone 6 in landscape */
+@media only screen 
+and (min-device-width : 375px) 
+and (max-device-width : 667px) 
+and (orientation : landscape) {
+  .normal .intro-text {
+    padding-top:4%;
+  }
+}
+/* iPhone 6 Plus in landscape */
+@media only screen 
+and (min-device-width : 540px) 
+and (max-device-width : 960px) 
+and (orientation : landscape) {
+  .normal .intro-text {
+    padding-top: 4%;
+  }
+  .normal .video-hero{
+    width: 190% !important;
+  }
+}
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 480px) {
+  .normal .intro-text p{
+    font-size: 1.2em;
+  
+}
+  .normal .push h6{
+    font-size: 1.8em;
+  }
+  .normal p{
+    font-size: 1.4em;
+  }
+}
+/* Smartphones (landscape) ----------- */
+@media only screen 
+and (max-width : 320px) {
+  .charly { margin-left: -10.4em; }
+  .naty { margin-right: -10.4em; }
 }
