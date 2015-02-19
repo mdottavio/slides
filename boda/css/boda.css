@@ -10,11 +10,18 @@ body.normal {
 	/* font-weight: 500; */
 	/* line-height: 120%; */
 	/* overflow-x: hidden; */
-	/* -webkit-font-smoothing: antialiased; */
+	 -webkit-font-smoothing: antialiased; 
 	/* padding: 15em; */
 }
-body.normal .terminal,
+.console *{
   display: none;
+  font-size: 14px !important;
+}
+.console .hero{
+  color: rgb(34, 34, 34) !important;
+  transition: all 250ms 250ms cubic-bezier(0.770, 0.000, 0.175, 1.000);
+}
+.console h6{
 }
 .normal a, .normal a:hover, .normal a:focus {
   color: #FFF;
@@ -27,7 +34,8 @@ body.normal .terminal,
   background-size:cover;
   box-shadow:inset 0px 0px 0 2000px rgba(0, 0, 0, 0.15);
   height:100%;
-  color: rgba(255, 255, 255,1) !important;
+  
+  color: rgba(255, 255, 255,1); 
   overflow: hidden;
   padding: .8em;
   position: relative;
@@ -317,4 +325,8 @@ and (max-device-width : 480px) {
 and (max-width : 320px) {
   .charly { margin-left: -10.4em; }
   .naty { margin-right: -10.4em; }
+}
+.doge{
+  background: url('');
+  background-repeat: no-repeat;
 }
