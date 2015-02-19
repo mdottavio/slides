@@ -3,12 +3,12 @@ $( document ).ready(function() {
   $('.bothsofthem').addClass('showed');
   var videos = {
     'mp4' : {
-      'url' : 'http://videos-c-11.ak.instagram.com/hphotos-ak-xaf1/t50.2886-16/10926514_325109034357011_995370757_n.mp4',
-      'size' : 4094213
+      'url' : 'http://videos-c-13.ak.instagram.com/hphotos-ak-xfa1/t50.2886-16/11014502_1571794513062933_96827559_n.mp4',
+      'size' : 7338761
     },
     'webm' : {
-      'url' : 'img/10926514_325109034357011_995370757_n.webm',
-      'size' : 3108997
+      'url' : 'img/11014502_1571794513062933_96827559_n.webm',
+      'size' : 3281443
     }
   }
   //video preloader
