@@ -1,37 +1,17 @@
 /* CSS for common people */
 body.normal {
-	/* background: #FFF; */
-	/* position: relative; */
-	/* width: 100%; */
-	/* color: #6E6E86; */
-	/* margin: auto 0; */
-	/* padding-top: 0; */
-	/* font-size: 16px; */
-	/* font-weight: 500; */
-	/* line-height: 120%; */
-	/* overflow-x: hidden; */
 	 -webkit-font-smoothing: antialiased; 
-	/* padding: 15em; */
 }
-.console *{
-  display: none;
-  font-size: 14px !important;
-}
-.console .hero{
-  color: rgb(34, 34, 34) !important;
-  transition: all 250ms 250ms cubic-bezier(0.770, 0.000, 0.175, 1.000);
-}
-.console h6{
-}
+
 .normal a, .normal a:hover, .normal a:focus {
-  color: #FFF;
+  /* color: #FFF; */
   text-decoration: none;
   outline: none;
 }
-
 .normal .hero {
-/*   background-image: url('https://fbcdn-sphotos-e-a.akamaihd.net/hphotos-ak-xpa1/t31.0-8/10847638_10153096623754448_9037173703604125633_o.jpg'); */
+ /* background-image: url('https://fbcdn-sphotos-e-a.akamaihd.net/hphotos-ak-xpa1/t31.0-8/10847638_10153096623754448_9037173703604125633_o.jpg'); 
   background-size:cover;
+ */
   box-shadow:inset 0px 0px 0 2000px rgba(0, 0, 0, 0.15);
   height:100%;
   
@@ -104,7 +84,7 @@ body.normal {
   font-size: 1.2em;
   color: #FFF;
 }
-#video-container,
+#slider,
 .normal .bothsofthem{
 	left: 0;
 	position: absolute;
@@ -115,15 +95,6 @@ body.normal {
 	width: 100%; /* Safari/Chrome, other WebKit */       /* Firefox, other Gecko */            /* Opera/IE 8+ */;
 	border: .8em solid rgb(255, 255, 255);
 	-webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;
-	/* fallback */
-
-	/* Safari 4-5, Chrome 1-9 */
-	/* Can't specify a percentage size? Laaaaaame. */
-	/* background: -webkit-gradient(radial, center center, 0, center center, 460, from(#B0BECF), to(#E5EAF0)); */
-
-	/* Safari 5.1+, Chrome 10+ */
-	 
-	/* background: -webkit-radial-gradient(circle, #B0BECF, #E5EAF0); */ 
 
 	/* Firefox 3.6+ */
 	background: -moz-radial-gradient(circle, #B0BECF, #E5EAF0);
@@ -133,18 +104,249 @@ body.normal {
 
 	/* Opera couldn't do radial gradients, then at some point they started supporting the -webkit- syntax, how it kinda does but it's kinda broken (doesn't do sizing) */
 	background: #FFF;
+	z-index: 10;
 }
+
+.cb-slideshow,
+.cb-slideshow:after {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    z-index: 0;
+}
+.cb-slideshow:after {
+    content: '';
+    /*background: transparent url(../images/pattern.png) repeat top left;*/
+}
+.cb-slideshow li span {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    color: transparent;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: none;
+    opacity: 0;
+    z-index: 0;
+  -webkit-backface-visibility: hidden;
+    -webkit-animation: imageAnimation 36s linear infinite 0s;
+    -moz-animation: imageAnimation 36s linear infinite 0s;
+    -o-animation: imageAnimation 36s linear infinite 0s;
+    -ms-animation: imageAnimation 36s linear infinite 0s;
+    animation: imageAnimation 36s linear infinite 0s;
+}
+/*
+.cb-slideshow li div {
+    z-index: 1000;
+    position: absolute;
+    bottom: 30px;
+    left: 0px;
+    width: 100%;
+    text-align: center;
+    opacity: 0;
+    -webkit-animation: titleAnimation 36s linear infinite 0s;
+    -moz-animation: titleAnimation 36s linear infinite 0s;
+    -o-animation: titleAnimation 36s linear infinite 0s;
+    -ms-animation: titleAnimation 36s linear infinite 0s;
+    animation: titleAnimation 36s linear infinite 0s;
+}
+.cb-slideshow li div h3 {
+    font-family: 'BebasNeueRegular', 'Arial Narrow', Arial, sans-serif;
+    font-size: 240px;
+    padding: 0;
+    line-height: 200px;
+  color: rgba(169,3,41, 0.8);
+}
+*/
+
+.cb-slideshow li:nth-child(1) span { 
+  /*background-image: url(../assets/img-01.jpg) */
+}
+.cb-slideshow li:nth-child(2) span {
+    /*background-image: url(../assets/img-02.jpg);*/
+    -webkit-animation-delay: 6s;
+    -moz-animation-delay: 6s;
+    -o-animation-delay: 6s;
+    -ms-animation-delay: 6s;
+    animation-delay: 6s;
+}
+.cb-slideshow li:nth-child(3) span {
+    /*background-image: url(../assets/img-01.jpg);*/
+    -webkit-animation-delay: 12s;
+    -moz-animation-delay: 12s;
+    -o-animation-delay: 12s;
+    -ms-animation-delay: 12s;
+    animation-delay: 12s;
+}
+.cb-slideshow li:nth-child(4) span {
+    /*background-image: url(../assets/img-02.jpg);*/
+    -webkit-animation-delay: 18s;
+    -moz-animation-delay: 18s;
+    -o-animation-delay: 18s;
+    -ms-animation-delay: 18s;
+    animation-delay: 18s;
+}
+.cb-slideshow li:nth-child(5) span {
+    /*background-image: url(../assets/img-01.jpg);*/
+    -webkit-animation-delay: 24s;
+    -moz-animation-delay: 24s;
+    -o-animation-delay: 24s;
+    -ms-animation-delay: 24s;
+    animation-delay: 24s;
+}
+.cb-slideshow li:nth-child(6) span {
+    /*background-image: url(../assets/img-02.jpg);*/
+    -webkit-animation-delay: 30s;
+    -moz-animation-delay: 30s;
+    -o-animation-delay: 30s;
+    -ms-animation-delay: 30s;
+    animation-delay: 30s;
+}
+.cb-slideshow li:nth-child(2) div {
+    -webkit-animation-delay: 6s;
+    -moz-animation-delay: 6s;
+    -o-animation-delay: 6s;
+    -ms-animation-delay: 6s;
+    animation-delay: 6s;
+}
+.cb-slideshow li:nth-child(3) div {
+    -webkit-animation-delay: 12s;
+    -moz-animation-delay: 12s;
+    -o-animation-delay: 12s;
+    -ms-animation-delay: 12s;
+    animation-delay: 12s;
+}
+.cb-slideshow li:nth-child(4) div {
+    -webkit-animation-delay: 18s;
+    -moz-animation-delay: 18s;
+    -o-animation-delay: 18s;
+    -ms-animation-delay: 18s;
+    animation-delay: 18s;
+}
+.cb-slideshow li:nth-child(5) div {
+    -webkit-animation-delay: 24s;
+    -moz-animation-delay: 24s;
+    -o-animation-delay: 24s;
+    -ms-animation-delay: 24s;
+    animation-delay: 24s;
+}
+.cb-slideshow li:nth-child(6) div {
+    -webkit-animation-delay: 30s;
+    -moz-animation-delay: 30s;
+    -o-animation-delay: 30s;
+    -ms-animation-delay: 30s;
+    animation-delay: 30s;
+}
+/* Animation for the slideshow images */
+@-webkit-keyframes imageAnimation { 
+  0% {
+      opacity: 0;
+      -webkit-animation-timing-function: ease-in;
+  }
+  8% {
+      opacity: 1;
+      -webkit-transform: scale(1.05);
+      -webkit-animation-timing-function: ease-out;
+  }
+  17% {
+      opacity: 1;
+      -webkit-transform: scale(1.1);
+  }
+  25% {
+      opacity: 0;
+      -webkit-transform: scale(1.1);
+  }
+  100% { opacity: 0 }
+}
+/*@-moz-keyframes imageAnimation { 
+  0% {
+      opacity: 0;
+      -moz-animation-timing-function: ease-in;
+  }
+  8% {
+      opacity: 1;
+      -moz-transform: scale(1.05);
+      -moz-animation-timing-function: ease-out;
+  }
+  17% {
+      opacity: 1;
+      -moz-transform: scale(1.1);
+  }
+  25% {
+      opacity: 0;
+      -moz-transform: scale(1.1);
+  }
+  100% { opacity: 0 }
+}
+@-o-keyframes imageAnimation { 
+  0% {
+      opacity: 0;
+      -o-animation-timing-function: ease-in;
+  }
+  8% {
+      opacity: 1;
+      -o-transform: scale(1.05);
+      -o-animation-timing-function: ease-out;
+  }
+  17% {
+      opacity: 1;
+      -o-transform: scale(1.1);
+  }
+  25% {
+      opacity: 0;
+      -o-transform: scale(1.1);
+  }
+  100% { opacity: 0 }
+}
+@-ms-keyframes imageAnimation { 
+  0% {
+      opacity: 0;
+      -ms-animation-timing-function: ease-in;
+  }
+  8% {
+      opacity: 1;
+      -ms-transform: scale(1.05);
+      -ms-animation-timing-function: ease-out;
+  }
+  17% {
+      opacity: 1;
+      -ms-transform: scale(1.1);
+  }
+  25% {
+      opacity: 0;
+      -ms-transform: scale(1.1);
+  }
+  100% { opacity: 0 }
+}
+@keyframes imageAnimation { 
+  0% {
+      opacity: 0;
+      animation-timing-function: ease-in;
+  }
+  8% {
+      opacity: 1;
+      transform: scale(1.05);
+      animation-timing-function: ease-out;
+  }
+  17% {
+      opacity: 1;
+      transform: scale(1.1);
+  }
+  25% {
+      opacity: 0;
+      transform: scale(1.1);
+  }
+  100% { opacity: 0 }
+}*/
+
+/*.normal .bothsofthem{ opacity: 0; }*/
+.loading .bothsofthem{ opacity: 1; }
 .normal .hero .row{ z-index: 11111111; position: relative;}
-.normal video {
-	bottom: 0; 
-	left: 0; 
-	position: absolute; 
-	width: 190%;
-	height: auto;
-	/* display: none; */
-	z-index: 11;
-	/* position: relative; */
-}
+
 .normal #map {
   height: 350px;
   margin-top: 1.9em;
@@ -154,24 +356,11 @@ body.normal {
     max-width : none;
 }
 
-
 .bothsofthem{
-/*   width: 100%;
-  overflow: hidden;
-  position: absolute;
-  height: 100%;
-  background: red;
-  top: 0px;
-  border: .8em solid rgb(255, 255, 255);
-  -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;
- */
-   
-
-   /* display: none; */
-
-
-   z-index: 10;
+   opacity: 0; 
+   z-index: 0;
 }
+.showed .bothsofthem { opacity: 1; }
 .charly, .naty{ 
   opacity: 0;
   width: 15em; 
@@ -188,15 +377,13 @@ body.normal {
 }
 .naty{ right: 50%; margin-right: -15.4em; }
 .charly { left: 50%; margin-left: -15.4em; }
-.showed .charly,
-.showed .naty{ opacity: 1; }
-
-.vjs-control-bar{ display: none; }
+.showed .charly, .showed .naty, .showed .pluss-container{ opacity: 1; }
 
 /**
  * Pluss icon
  */
 .pluss-container {
+  opacity: 0;
   position: relative;
   margin: -40px auto auto auto;
   top: 54%;
@@ -219,7 +406,7 @@ body.normal {
   background-repeat: no-repeat;
   background-position: 50% 50%;
   background-size: contain;
-  color: red;
+  /* color: red; */
 }
 
 @-webkit-keyframes spin-step-simple {
@@ -329,4 +516,18 @@ and (max-width : 320px) {
 .doge{
   background: url('');
   background-repeat: no-repeat;
+}
+
+/**
+ * CSS for nerds
+ */
+.console *{
+  display: none;
+  font-size: 14px !important;
+}
+.console .hero{
+  color: rgb(34, 34, 34) !important;
+  transition: all 250ms 250ms cubic-bezier(0.770, 0.000, 0.175, 1.000);
+}
+.console h6{
 }

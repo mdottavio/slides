@@ -1,51 +1,37 @@
 
 $( document ).ready(function() {
-  $('.bothsofthem').addClass('showed');
-  var videos = {
-    'mp4' : {
-      'url' : 'http://videos-c-13.ak.instagram.com/hphotos-ak-xfa1/t50.2886-16/11014502_1571794513062933_96827559_n.mp4',
-      'size' : 7338761
-    },
-    'webm' : {
-      'url' : 'img/11014502_1571794513062933_96827559_n.webm',
-      'size' : 3281443
-    }
-  }
+  
   //video preloader
-  function loadVideos(){
+  function loadImgs(){
     $.html5Loader({
       filesToLoad: {
         files:[
           {
-            "type": "VIDEO",
-            "sources": {
-              "webm": {
-                "source": videos.webm.url,
-                "size": videos.webm.size
-              },
-              "h264": {
-                "source": videos.mp4.url,
-                "size": videos.mp4.size
-              }
-            }
+            "type": "IMAGE",
+            "source": 'assets/img-01.jpg',
+            "size": 273289
+          },
+          {
+            "type": "IMAGE",
+            "source": 'assets/img-02.jpg',
+            "size": 274704
           }
         ]
       },
       onComplete: function () {
-        var video = $('<video id="video-hero" class="video-hero" data-aspect="1.78" preload="auto" loop="loop" autoplay></video>')
-              .append('<source src="'+videos.mp4.url+'" type="video/mp4" />')
-              .append('<source src="'+videos.webm.url+'" type="video/webm" />')
-              .appendTo($("#video-container"));
-        videojs("video-hero", {
-          "autoplay": true,
-          "loop": "true",
-          "preload": "auto",
-          "controls": false
-        }, function(){
-          setTimeout(function(){
-            $('#intro').removeClass('loading');
-          }, 800);
-        });
+        setTimeout(function(){
+          var items = $('.cb-slideshow li span');
+          $(items[0]).css('background-image', 'url("assets/img-01.jpg")');
+          $(items[1]).css('background-image', 'url("assets/img-02.jpg")');
+          $(items[2]).css('background-image', 'url("assets/img-01.jpg")');
+          $(items[3]).css('background-image', 'url("assets/img-02.jpg")');
+          $(items[4]).css('background-image', 'url("assets/img-01.jpg")');
+          $(items[5]).css('background-image', 'url("assets/img-02.jpg")');
+          // $('.slider-item:first').css('background-image', 'url("assets/img-01.jpg")');
+          // $('.slider-item:last').css('background-image','url("assets/img-02.jpg");');
+          $('.hero').removeClass('loading');
+          $('.bothsofthem').removeClass('showed');
+        }, 800);
       }
     })
   }
@@ -53,18 +39,21 @@ $( document ).ready(function() {
   var map = new GMaps({
     div: '#map',
     scrollwheel: false,
-    lat: -31.218326,
-    lng: -64.300173
+    lat: -31.066050,
+    lng: -64.282911
   });
-  map.addMarker({
-    lat: -31.218326,
-    lng: -64.300173,
-    title: 'Salon',
-    infoWindow: {
-      content: '<p>Salon de eventos lalala</p>'
-    }
-  });
+  // map.addMarker({
+  //   lat: -31.066050,
+  //   lng: -64.282911,
+  //   title: 'El Rosal',
+  //   infoWindow: {
+  //     content: '<p>Estancia El Rosal</p>'
+  //   }
+  // });
 
+  map.loadFromKML({
+    url: 'http://dottavio.github.io/slides/boda/assets/ruta.kml',
+  });
 
   var content = document.getElementsByClassName('content');
   if(window.location.href.search('console') > -1){
@@ -83,7 +72,7 @@ $( document ).ready(function() {
       content = [];
     })
   } else {
-    setTimeout(loadVideos, 1500);
+    setTimeout(loadImgs, 1500);
   }
 
   function writeContent(phrases){
