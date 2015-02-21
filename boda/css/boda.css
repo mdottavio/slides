@@ -4,14 +4,10 @@ body.normal {
 }
 
 .normal a, .normal a:hover, .normal a:focus {
-  /* color: #FFF; */
   text-decoration: none;
   outline: none;
 }
 .normal .hero {
- /* background-image: url('https://fbcdn-sphotos-e-a.akamaihd.net/hphotos-ak-xpa1/t31.0-8/10847638_10153096623754448_9037173703604125633_o.jpg'); 
-  background-size:cover;
- */
   box-shadow:inset 0px 0px 0 2000px rgba(0, 0, 0, 0.15);
   height:100%;
   
@@ -107,9 +103,8 @@ body.normal {
 	z-index: 10;
 }
 
-.cb-slideshow,
-.cb-slideshow:after {
-    position: relative;
+.cb-slideshow, .cb-slideshow:after {
+    position: absolute;
     width: 100%;
     height: 100%;
     top: 0px;
@@ -118,7 +113,6 @@ body.normal {
 }
 .cb-slideshow:after {
     content: '';
-    /*background: transparent url(../images/pattern.png) repeat top left;*/
 }
 .cb-slideshow li span {
     width: 100%;
