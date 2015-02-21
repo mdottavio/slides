@@ -9,12 +9,32 @@ $( document ).ready(function() {
           {
             "type": "IMAGE",
             "source": 'assets/img-01.jpg',
-            "size": 273289
+            "size": 255390
           },
           {
             "type": "IMAGE",
             "source": 'assets/img-02.jpg',
-            "size": 274704
+            "size": 224347
+          },
+          {
+            "type": "IMAGE",
+            "source": 'assets/img-03.jpg',
+            "size": 220122
+          },
+          {
+            "type": "IMAGE",
+            "source": 'assets/img-04.jpg',
+            "size": 231646
+          },
+          {
+            "type": "IMAGE",
+            "source": 'assets/img-05.jpg',
+            "size": 195170
+          },
+          {
+            "type": "IMAGE",
+            "source": 'assets/img-06.jpg',
+            "size": 240718
           }
         ]
       },
@@ -23,12 +43,10 @@ $( document ).ready(function() {
           var items = $('.cb-slideshow li span');
           $(items[0]).css('background-image', 'url("assets/img-01.jpg")');
           $(items[1]).css('background-image', 'url("assets/img-02.jpg")');
-          $(items[2]).css('background-image', 'url("assets/img-01.jpg")');
-          $(items[3]).css('background-image', 'url("assets/img-02.jpg")');
-          $(items[4]).css('background-image', 'url("assets/img-01.jpg")');
-          $(items[5]).css('background-image', 'url("assets/img-02.jpg")');
-          // $('.slider-item:first').css('background-image', 'url("assets/img-01.jpg")');
-          // $('.slider-item:last').css('background-image','url("assets/img-02.jpg");');
+          $(items[2]).css('background-image', 'url("assets/img-03.jpg")');
+          $(items[3]).css('background-image', 'url("assets/img-04.jpg")');
+          $(items[4]).css('background-image', 'url("assets/img-05.jpg")');
+          $(items[5]).css('background-image', 'url("assets/img-06.jpg")');
           $('.hero').removeClass('loading');
           $('.bothsofthem').removeClass('showed');
         }, 800);
@@ -42,14 +60,6 @@ $( document ).ready(function() {
     lat: -31.066050,
     lng: -64.282911
   });
-  // map.addMarker({
-  //   lat: -31.066050,
-  //   lng: -64.282911,
-  //   title: 'El Rosal',
-  //   infoWindow: {
-  //     content: '<p>Estancia El Rosal</p>'
-  //   }
-  // });
 
   map.loadFromKML({
     url: 'http://dottavio.github.io/slides/boda/assets/ruta.kml',
